@@ -37,6 +37,9 @@ function initMobileMenu() {
   if (gnbMenuMo && gnbModal) {
     gnbMenuMo.addEventListener("click", function () {
       gnbModal.classList.add("on");
+      // body에 스크롤 방지 스타일 추가
+      document.body.style.height = "100vh";
+      document.body.style.overflow = "hidden";
     });
   }
 
@@ -44,6 +47,9 @@ function initMobileMenu() {
   if (modalCloseBtn && gnbModal) {
     modalCloseBtn.addEventListener("click", function () {
       gnbModal.classList.remove("on");
+      // body의 스크롤 방지 스타일 제거
+      document.body.style.height = "";
+      document.body.style.overflow = "";
     });
   }
 }
