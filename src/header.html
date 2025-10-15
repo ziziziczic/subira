@@ -1,0 +1,355 @@
+<style>
+  .gnb-area {
+    position: relative;
+  }
+  .gnb {
+    margin: 0 auto;
+    max-width: 1280px;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* title */
+  .gnb-title {
+    position: relative;
+  }
+  .gnb-title a {
+    display: block;
+  }
+  .gnb-title img {
+    display: block;
+    width: 238px;
+    height: auto;
+  }
+
+  /* menu */
+  .gnb nav {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  .gnb-menu {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+  }
+  .gnb-menu-mo {
+    display: none;
+  }
+  .gnb-menu .gnb-menu-item > a {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    color: var(--black1);
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 140%; /* 28px */
+    text-decoration: none;
+  }
+  .gnb-menu .gnb-menu-item:hover > a {
+    border-bottom: 2px solid var(--blue);
+    color: var(--blue);
+  }
+  .gnb-menu .gnb-menu-item li {
+    display: flex;
+    align-items: center;
+  }
+  .gnb-menu .gnb-menu-item li:hover {
+    color: var(--blue);
+  }
+  .gnb-sub-menu-area {
+    display: none;
+  }
+  .gnb-menu .gnb-menu-item:hover .gnb-sub-menu-area {
+    z-index: 10;
+    display: block;
+    position: absolute;
+    left: 0px;
+    bottom: -62px;
+    width: 100vw;
+    height: 62px;
+    background: var(--white);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+  .gnb-sub-menu {
+    margin: 0 auto;
+    max-width: 1280px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+  .gnb-modal {
+    display: none;
+  }
+
+  @media (max-width: 1280px) {
+    .gnb {
+      padding: 0 20px;
+      height: 64px;
+    }
+    .gnb-title img {
+      width: 184px;
+    }
+    .gnb-menu {
+      display: none;
+    }
+    .gnb-menu-mo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .gnb-menu-mo img {
+      width: 24px;
+      height: 24px;
+    }
+    /* modal */
+    .gnb-modal.on {
+      z-index: 10;
+      position: fixed;
+      left: 0;
+      top: 0;
+      display: block;
+      width: 100vw;
+      height: 100vh;
+      overflow: auto;
+      background: white;
+    }
+
+    /* modal-header */
+    .gnb-modal.on .modal-header {
+      margin-bottom: 10px;
+      padding: 0 20px;
+      height: 53px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--light-gray);
+    }
+    .gnb-modal.on .modal-header h3 {
+      color: var(--black0);
+      font-size: 18px;
+      font-weight: 700;
+    }
+    .gnb-modal.on .modal-header img {
+      width: 24px;
+      height: 24px;
+    }
+
+    /* modal-gnb-menu */
+    .gnb-modal.on .modal-gnb-menu {
+      padding: 0 20px;
+    }
+    .gnb-modal.on .modal-gnb-menu .modal-gnb-menu-item > a {
+      display: block;
+      width: 100%;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--black0);
+      font-size: 16px;
+      font-weight: 700;
+    }
+    .gnb-modal.on .modal-gnb-menu .modal-gnb-menu-item > a:after {
+      content: "";
+      width: 12px;
+      height: 12px;
+      background: url(../img/icon-right-arrow-12x12.png) center/12px no-repeat;
+    }
+    .gnb-modal.on .modal-gnb-sub-menu {
+      padding: 16px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      row-gap: 16px;
+      column-gap: 25px;
+      background: var(--gray);
+      border-radius: 4px;
+    }
+    .gnb-modal.on .modal-gnb-sub-menu a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      color: var(--black);
+      font-size: 14px;
+      line-height: 160%; /* 22.4px */
+    }
+
+    /* 상담 신청 하기 */
+    .gnb-modal.on .counsel-area {
+      margin: 20px 20px 0 20px;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      background: #f4f0e4;
+      box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.05);
+    }
+    .gnb-modal.on .counsel-area img {
+      width: 24px;
+      height: 24px;
+    }
+    .gnb-modal.on .counsel-area a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .gnb-modal.on .counsel-area a p {
+      margin-left: 12px;
+      margin-right: 4px;
+      color: var(--black);
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: -0.48px;
+    }
+    .gnb-modal.on .counsel-area > p {
+      color: var(--black);
+      text-align: center;
+      font-size: 16px;
+      letter-spacing: -0.32px;
+    }
+  }
+</style>
+
+<div class="gnb-area">
+  <div class="gnb">
+    <!-- title -->
+    <h1 class="gnb-title">
+      <span class="blind">신도관리프로그램 수비라</span>
+      <a href="../index.html">
+        <img src="../img/logo-min.png" alt="신도관리프로그램 수비라" />
+      </a>
+    </h1>
+
+    <nav>
+      <!-- pc 메뉴-->
+      <ul class="gnb-menu">
+        <li class="gnb-menu-item">
+          <a href="#">신도관리프로그램 수비라</a>
+          <div class="gnb-sub-menu-area">
+            <ul class="gnb-sub-menu">
+              <li><a href="#">브랜드 스토리</a></li>
+              <li><a href="#">주요 기능</a></li>
+              <li><a href="#">도입 효과</a></li>
+              <li><a href="#">바로 비교하기</a></li>
+              <li><a href="#">보안&amp;안정성</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="gnb-menu-item">
+          <a href="#">출력물 소개</a>
+          <div class="gnb-sub-menu-area">
+            <ul class="gnb-sub-menu">
+              <li><a href="#">연등꼬리표</a></li>
+              <li><a href="#">위패</a></li>
+              <li><a href="#">출력물</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="gnb-menu-item">
+          <a href="#">사찰 홈페이지 제작</a>
+          <div class="gnb-sub-menu-area">
+            <ul class="gnb-sub-menu">
+              <li><a href="#">포트폴리오</a></li>
+              <li><a href="#">제작안내</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="gnb-menu-item">
+          <a href="#">문의 하기</a>
+          <div class="gnb-sub-menu-area">
+            <ul class="gnb-sub-menu">
+              <li><a href="#">문의하기</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+
+      <!-- mo 메뉴-->
+      <button class="gnb-menu-mo">
+        <img src="../img/menu.png" alt="" />
+      </button>
+    </nav>
+
+    <!-- mo 메뉴 modal : modal 활성화시, on 부착 -->
+    <div class="gnb-modal">
+      <div class="modal-header">
+        <h3>전체메뉴</h3>
+        <button>
+          <img src="../img/icon-close.png" alt="닫기" />
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <ul class="modal-gnb-menu">
+          <li class="modal-gnb-menu-item">
+            <a href="../index.html">홈</a>
+          </li>
+          <li class="modal-gnb-menu-item">
+            <a href="#">신도관리프로그램 수비라</a>
+            <div class="modal-gnb-sub-menu-area">
+              <ul class="modal-gnb-sub-menu">
+                <li><a href="#">브랜드 스토리</a></li>
+                <li><a href="#">주요 기능</a></li>
+                <li><a href="#">도입 효과</a></li>
+                <li><a href="#">바로 비교하기</a></li>
+                <li><a href="#">보안&amp;안정성</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="modal-gnb-menu-item">
+            <a href="#">출력물 소개</a>
+            <div class="modal-gnb-sub-menu-area">
+              <ul class="modal-gnb-sub-menu">
+                <li><a href="#">연등꼬리표</a></li>
+                <li><a href="#">위패</a></li>
+                <li><a href="#">출력물</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="modal-gnb-menu-item">
+            <a href="#">사찰 홈페이지 제작</a>
+            <div class="modal-gnb-sub-menu-area">
+              <ul class="modal-gnb-sub-menu">
+                <li><a href="#">포트폴리오</a></li>
+                <li><a href="#">제작안내</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="modal-gnb-menu-item">
+            <a href="#">문의 하기</a>
+            <div class="modal-gnb-sub-menu-area">
+              <ul class="modal-gnb-sub-menu">
+                <li><a href="#">문의하기</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+
+        <div class="counsel-area">
+          <a href="#">
+            <img src="../img/icon-mail.png" alt="상담신청하기 아이콘" />
+            <p>상담 신청하기</p>
+            <img
+              src="../img/icon-right-arrow-brown-24x24.png"
+              alt="상담신청하기 바로가기"
+            />
+          </a>
+          <p>연락처를 남겨주시면 확인 후 빠르게 연락드리겠습니다:)</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

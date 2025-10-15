@@ -1,0 +1,140 @@
+/* 최상단 이미지 */
+.top-img-area {
+  position: relative;
+}
+/* title */
+.top-img-area .title-area {
+  position: absolute;
+  top: 110px;
+  left: 60px;
+}
+.top-img-area .title {
+  color: var(--black);
+  font-size: 34px;
+  font-weight: 400;
+  line-height: 120%;
+}
+.top-img-area .title span {
+  color: var(--dark-brown);
+  font-weight: 600;
+  line-height: 120%;
+}
+.top-img-area .title b {
+  font-size: 56px;
+  font-weight: 800;
+  color: var(--dark-brown);
+  line-height: 120%;
+}
+.top-img-area .sub-title {
+  margin-top: 20px;
+  font-size: 20px;
+}
+.top-img-area .sub-title div {
+  display: inline;
+}
+.top-img-area .sub-title span {
+  font-weight: 700;
+}
+/* 이미지 */
+.top-img-area .main-top {
+  display: block;
+  width: 1280px;
+  height: 649px;
+}
+.top-img-area .main-top-mo {
+  display: none;
+}
+/* 상단 문의 안내 */
+.top-img-area .tel-area {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 218px;
+  height: 151px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background: var(--light-brown);
+  border-radius: 20px;
+}
+.top-img-area .tel-area .text-area {
+  display: flex;
+  gap: 4px;
+}
+.top-img-area .tel-area .text-area span {
+  color: var(--white);
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -0.6px;
+}
+.top-img-area .tel-area .text-area img {
+  width: 24px;
+  height: 24px;
+}
+.top-img-area .tel-area .tel {
+  padding: 0 15px;
+  height: 46px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    114deg,
+    #fffef6 45.57%,
+    #fffced 60.68%,
+    #eae2b3 76.17%,
+    #e9da89 82.37%,
+    #e9da89 84.31%
+  );
+  border-radius: 30px;
+}
+.top-img-area .tel-area .tel a {
+  color: var(--brown);
+  font-size: 20px;
+  font-weight: 700;
+}
+
+@media (max-width: 1280px) {
+  /* title */
+  .top-img-area .title-area {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 250px;
+  }
+  .top-img-area .title {
+    font-size: 16px;
+  }
+  .top-img-area .title b {
+    font-size: 32px;
+  }
+  .top-img-area .sub-title {
+    font-size: 16px;
+  }
+  .top-img-area .sub-title div {
+    display: block;
+    text-align: center;
+  }
+  /* 이미지 */
+  .top-img-area .main-top {
+    display: none;
+  }
+  .top-img-area .main-top-mo {
+    display: block;
+    width: 100%;
+  }
+  /* 상단 문의 안내 */
+  .top-img-area .tel-area {
+    margin-top: 20px;
+    padding: 0 30px;
+    position: relative;
+    width: 100%;
+    height: 135px;
+    gap: 18px;
+  }
+  .top-img-area .tel-area .tel {
+    width: 100%;
+  }
+}
