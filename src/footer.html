@@ -1,1 +1,111 @@
+<style>
+  #footer {
+    border-top: 1px solid var(--border);
+    background: var(--bg1);
+  }
 
+  #footer .footer-area {
+    margin: 0 auto;
+    padding: 40px 0 100px;
+    max-width: 1280px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  #footer .footer-area .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #footer .footer-area .footer-top .footer-top-item1 {
+    width: 956px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    background: var(--white);
+  }
+
+  #footer .footer-area .footer-top .footer-top-item1 p {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    color: var(--black);
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 35px; /* 159.091% */
+  }
+
+  #footer .footer-area .footer-top .footer-top-item1 p img {
+    width: 16px;
+    height: 16px;
+    display: block;
+  }
+
+  #footer .footer-area .footer-top .footer-top-item1 p b {
+    font-weight: 600;
+  }
+
+  #footer .footer-area .footer-top .footer-top-item2 {
+    width: 308px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    background: var(--blue);
+  }
+
+  #footer .footer-area .footer-top .footer-top-item2 img {
+    width: 24px;
+    height: 24px;
+    display: block;
+  }
+
+  #footer .footer-area .footer-top .footer-top-item2 span {
+    color: var(--white);
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 35px; /* 159.091% */
+  }
+
+  @media (max-width: 1280px) {
+    #footer .footer-area {
+      padding: 30px 0 97px;
+    }
+  }
+</style>
+
+<div class="footer-area">
+  <div class="footer-top">
+    <!-- 대표 전화 번호 -->
+    <div class="footer-top-item1">
+      <p>
+        <img src="./img/icon-tel2.png" alt="전화 아이콘" />
+        <span>대표 전화 번호 <b>02-6748-5212</b></span>
+      </p>
+      <p>수비라 상담 내선 (1)번, 홈페이지 제작 내선 (2)번</p>
+    </div>
+
+    <!-- 원격 지원 하기 -->
+    <button class="footer-top-item2">
+      <img src="./img/icon-pc.png" alt="원격 지원 아이콘" />
+      <span>원격 지원 시작하기</span>
+    </button>
+  </div>
+
+  <div class="footer-bottom">
+    <p>
+      (주) 오투아이 | 사업자번호 : 214-87-35526 | 대표 : 전병규 경기도 고양시
+      덕양구 원흥4로 9, 아뜨리에프라자 8층 801호, 802호 팩스 : 070-7860-7906
+    </p>
+    <img src="./img/otoi-logo.png" alt="오투아이 로고" />
+  </div>
+</div>

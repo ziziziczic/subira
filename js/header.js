@@ -1,4 +1,4 @@
-// 페이지 로드가 끝나면 gnb.html 파일을 불러오는 함수 실행
+// 페이지 로드가 끝나면 header.html 파일을 불러오는 함수 실행
 document.addEventListener("DOMContentLoaded", function () {
   const _header = document.getElementById("header");
   if (!_header) {
