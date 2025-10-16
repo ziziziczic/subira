@@ -11,10 +11,31 @@ section + section {
   margin-top: 150px;
 }
 
-h2 {
+section h2 {
   color: var(--black);
   font-size: 36px;
   font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+section h2 a {
+  display: inline;
+  color: var(--gray7);
+  font-size: 20px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+section h2 a:after {
+  margin-bottom: 2px;
+  content: "";
+  width: 24px;
+  height: 24px;
+  background: url(../img/icon-right-arrow-gray-24x24.png) center/24px no-repeat;
 }
 
 section > .sub-title {
@@ -33,9 +54,19 @@ section > .sub-title {
     margin-top: 70px;
   }
 
-  h2 {
+  section h2 {
     font-size: 20px;
     font-weight: 600;
+  }
+
+  section h2 a {
+    font-size: 14px;
+  }
+
+  section h2 a:after {
+    width: 20px;
+    height: 20px;
+    background-size: 20px;
   }
 
   section > .sub-title {
