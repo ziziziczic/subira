@@ -1,0 +1,56 @@
+/* 상담 신청 하기 */
+.counsel-area {
+  padding: 55px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  background: #f4f0e4;
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.05);
+}
+.counsel-area img {
+  width: 32px;
+  height: 32px;
+}
+.counsel-area a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.counsel-area a p {
+  margin-left: 12px;
+  margin-right: 4px;
+  color: var(--black);
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: -0.48px;
+}
+.counsel-area > p {
+  color: var(--black);
+  text-align: center;
+  font-size: 22px;
+  letter-spacing: -0.32px;
+}
+
+@media (max-width: 1280px) {
+  .counsel-area {
+    padding: 30px;
+  }
+
+  .counsel-area img {
+    margin-bottom: 3px;
+    width: 24px;
+    height: 24px;
+  }
+
+  .counsel-area a p {
+    font-size: 24px;
+  }
+
+  .counsel-area > p {
+    font-size: 16px;
+  }
+}
