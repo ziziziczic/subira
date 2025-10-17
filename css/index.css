@@ -1,7 +1,8 @@
 main {
-  padding: 16px 0 70px;
+  padding: 16px 0 150px;
   overflow: hidden;
 }
+
 section {
   margin: 0 auto;
   width: 1280px;
@@ -45,6 +46,9 @@ section > .sub-title {
 }
 
 @media (max-width: 1280px) {
+  main {
+    padding: 12px 0 70px;
+  }
   section {
     width: 100%;
     padding: 0 20px;
