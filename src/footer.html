@@ -47,7 +47,7 @@
     display: block;
   }
 
-  #footer .footer-area .footer-top .footer-top-item1 p b {
+  #footer .footer-area .footer-top .footer-top-item1 p a {
     font-weight: 600;
   }
 
@@ -98,6 +98,10 @@
     font-weight: 600;
   }
 
+  #footer .footer-area .footer-bottom p .bar.mo {
+    display: none;
+  }
+
   #footer .footer-area .footer-bottom img {
     display: block;
     width: 149px;
@@ -108,14 +112,90 @@
     #footer .footer-area {
       padding: 30px 0 97px;
     }
+
+    /* 대표 전화 번호  */
+    #footer .footer-area .footer-top .footer-top-item1 {
+      margin: 0 20px;
+      padding: 15px 0;
+      height: 89px;
+      flex-direction: column;
+      gap: 4px;
+    }
+
     #footer .footer-area .footer-top .footer-top-item1 p {
+      color: var(--gray7);
+      font-size: 14px;
+      text-align: center;
+      line-height: 140%;
+      letter-spacing: -0.42px;
       gap: 6px;
     }
+
     #footer .footer-area .footer-top .footer-top-item1 p span {
+      color: var(--black);
       font-size: 18px;
+      line-height: 35px; /* 194.444% */
+      letter-spacing: -0.54px;
+      gap: 6px;
     }
+
+    #footer .footer-area .footer-top .footer-top-item1 p span a {
+      font-weight: 700;
+    }
+
     #footer .footer-area .footer-top .footer-top-item1 .bar {
       display: none;
+    }
+
+    #footer .footer-area .footer-top .footer-top-item2 {
+      display: none;
+    }
+
+    #footer .footer-area .footer-bottom {
+      margin: 0 20px;
+      gap: 32px;
+      flex-direction: column;
+    }
+
+    #footer .footer-area .footer-bottom p {
+      line-height: 26px;
+    }
+
+    #footer .footer-area .footer-bottom p b {
+      display: block;
+      color: var(--gray7);
+      font-size: 20px;
+      font-weight: 800;
+      line-height: 160%; /* 32px */
+      letter-spacing: -0.6px;
+    }
+
+    #footer .footer-area .footer-bottom p b + .bar {
+      display: none;
+    }
+
+    #footer .footer-area .footer-bottom p br {
+      display: none;
+    }
+
+    #footer .footer-area .footer-bottom p span {
+      color: var(--black3);
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 160%; /* 25.6px */
+    }
+
+    #footer .footer-area .footer-bottom p .bar {
+      color: var(--bg3);
+    }
+
+    #footer .footer-area .footer-bottom p .bar.mo {
+      display: inline;
+    }
+
+    #footer .footer-area .footer-bottom img {
+      width: 139px;
+      height: 66px;
     }
   }
 </style>
@@ -126,7 +206,7 @@
     <div class="footer-top-item1">
       <p>
         <img src="./img/icon-tel2.png" alt="전화 아이콘" />
-        <span>대표 전화 번호 <b>02-6748-5212</b></span>
+        <span>대표 전화 번호 <a href="tel:0267485212">02-6748-5212</a></span>
       </p>
       <span class="bar">|</span>
       <p>수비라 상담 내선 (1)번, 홈페이지 제작 내선 (2)번</p>
@@ -146,10 +226,13 @@
       <span>사업자번호 : 214-87-35526</span>
       <span class="bar">|</span>
       <span>대표 : 전병규</span>
+      <span class="bar mo">|</span>
       <br />
       <span
-        >경기도 고양시 덕양구 원흥4로 9, 아뜨리에프라자 8층 801호, 802호</span
+        >주소 : 경기도 고양시 덕양구 원흥4로 9, 아뜨리에프라자 8층 801호,
+        802호</span
       >
+      <span class="bar mo">|</span>
       <br />
       <span>팩스 : 070-7860-7906</span>
     </p>

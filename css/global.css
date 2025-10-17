@@ -4,7 +4,7 @@
   --black: #000;
   --black0: #0c0c0c;
   --black1: #1a1a1a;
-  --light-black: #333;
+  --black3: #333;
 
   --light-brown: #3a3413;
   --brown: #403a23;
@@ -22,6 +22,7 @@
 
   --bg1: #fbfbfb;
   --bg2: #676767;
+  --bg3: #d9d9d9;
 }
 * {
   scroll-behavior: smooth;
