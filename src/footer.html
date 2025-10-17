@@ -19,7 +19,7 @@
     justify-content: space-between;
     align-items: center;
   }
-
+  /* 대표 전화 번호  */
   #footer .footer-area .footer-top .footer-top-item1 {
     width: 956px;
     height: 55px;
@@ -34,7 +34,7 @@
   #footer .footer-area .footer-top .footer-top-item1 p {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 12px;
     color: var(--black);
     font-size: 22px;
     font-weight: 400;
@@ -51,6 +51,12 @@
     font-weight: 600;
   }
 
+  #footer .footer-area .footer-top .footer-top-item1 .bar {
+    margin: 0 12px;
+    color: var(--bg2);
+  }
+
+  /* 원격 지원 하기  */
   #footer .footer-area .footer-top .footer-top-item2 {
     width: 308px;
     height: 55px;
@@ -76,9 +82,40 @@
     line-height: 35px; /* 159.091% */
   }
 
+  #footer .footer-area .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #footer .footer-area .footer-bottom p {
+    color: var(--black);
+    font-size: 20px;
+    line-height: 35px;
+  }
+
+  #footer .footer-area .footer-bottom p b {
+    font-weight: 600;
+  }
+
+  #footer .footer-area .footer-bottom img {
+    display: block;
+    width: 149px;
+    height: 70px;
+  }
+
   @media (max-width: 1280px) {
     #footer .footer-area {
       padding: 30px 0 97px;
+    }
+    #footer .footer-area .footer-top .footer-top-item1 p {
+      gap: 6px;
+    }
+    #footer .footer-area .footer-top .footer-top-item1 p span {
+      font-size: 18px;
+    }
+    #footer .footer-area .footer-top .footer-top-item1 .bar {
+      display: none;
     }
   }
 </style>
@@ -91,6 +128,7 @@
         <img src="./img/icon-tel2.png" alt="전화 아이콘" />
         <span>대표 전화 번호 <b>02-6748-5212</b></span>
       </p>
+      <span class="bar">|</span>
       <p>수비라 상담 내선 (1)번, 홈페이지 제작 내선 (2)번</p>
     </div>
 
@@ -103,8 +141,17 @@
 
   <div class="footer-bottom">
     <p>
-      (주) 오투아이 | 사업자번호 : 214-87-35526 | 대표 : 전병규 경기도 고양시
-      덕양구 원흥4로 9, 아뜨리에프라자 8층 801호, 802호 팩스 : 070-7860-7906
+      <b>(주) 오투아이</b>
+      <span class="bar">|</span>
+      <span>사업자번호 : 214-87-35526</span>
+      <span class="bar">|</span>
+      <span>대표 : 전병규</span>
+      <br />
+      <span
+        >경기도 고양시 덕양구 원흥4로 9, 아뜨리에프라자 8층 801호, 802호</span
+      >
+      <br />
+      <span>팩스 : 070-7860-7906</span>
     </p>
     <img src="./img/otoi-logo.png" alt="오투아이 로고" />
   </div>

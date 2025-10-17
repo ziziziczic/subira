@@ -21,6 +21,7 @@
   --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
 
   --bg1: #fbfbfb;
+  --bg2: #676767;
 }
 * {
   scroll-behavior: smooth;
