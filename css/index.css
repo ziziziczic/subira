@@ -7,7 +7,7 @@ section + section {
   margin-top: 150px;
 }
 
-section h2 {
+section h3 {
   color: var(--black);
   font-size: 36px;
   font-weight: 600;
@@ -16,7 +16,7 @@ section h2 {
   align-items: center;
 }
 
-section h2 a {
+section h3 a {
   display: inline;
   color: var(--gray7);
   font-size: 20px;
@@ -26,7 +26,7 @@ section h2 a {
   gap: 5px;
 }
 
-section h2 a:after {
+section h3 a:after {
   margin-bottom: 2px;
   content: "";
   width: 24px;
@@ -49,16 +49,16 @@ section > .sub-title {
     margin-top: 70px;
   }
 
-  section h2 {
+  section h3 {
     font-size: 20px;
     font-weight: 600;
   }
 
-  section h2 a {
+  section h3 a {
     font-size: 14px;
   }
 
-  section h2 a:after {
+  section h3 a:after {
     width: 20px;
     height: 20px;
     background-size: 20px;
