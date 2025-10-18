@@ -3,23 +3,6 @@ main {
   overflow: hidden;
 }
 
-h2.title {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: var(--black);
-  font-size: 36px;
-  font-weight: 600;
-  line-height: normal;
-}
-
-h2.title .breadcrumb {
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 140%; /* 22.4px */
-  letter-spacing: -0.48px;
-}
-
 .story-intro-section {
   position: relative;
   margin-bottom: 60px;
