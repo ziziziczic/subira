@@ -7,11 +7,20 @@ main {
 /* 주요 기능 섹션 */
 .features-section {
   margin-bottom: 150px;
-  position: relative;
   overflow: hidden;
 }
 
-.features-section:before {
+.features-grid {
+  position: relative;
+  padding: 80px;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 30px;
+  background: var(--bg5);
+  border-radius: 20px;
+}
+
+.features-grid:before {
   z-index: 1;
   content: "";
   position: absolute;
@@ -22,7 +31,7 @@ main {
   background: url(../../img/common/bg-symbol.png) center/224px 164px no-repeat;
 }
 
-.features-section:after {
+.features-grid:after {
   z-index: 3;
   content: "";
   position: absolute;
@@ -32,15 +41,6 @@ main {
   height: 157px;
   background: url(../../img/main-features/icon-flower.png) center/195px 157px
     no-repeat;
-}
-
-.features-grid {
-  padding: 80px;
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  gap: 30px;
-  background: var(--bg5);
-  border-radius: 20px;
 }
 
 .feature-card {
@@ -88,12 +88,14 @@ main {
   color: var(--black);
   font-size: 20px;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 12px;
   width: auto;
 }
 
 .feature-card li:before {
+  position: relative;
+  top: 8px;
   content: "";
   width: 4px;
   height: 4px;
@@ -180,119 +182,64 @@ main {
     padding: 40px 0 70px;
   }
 
-  .title {
-    margin: 0 20px 40px;
-    font-size: 32px;
-    letter-spacing: -0.32px;
-  }
-
-  .breadcrumb {
-    margin-top: 15px;
-    font-size: 16px;
-    letter-spacing: -0.16px;
-  }
-
-  .features-section {
-    margin: 0 20px 60px;
-  }
-
-  .features-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
-
-  .feature-card {
-    padding: 25px;
-    border-radius: 15px;
-  }
-
-  .feature-card h3 {
-    margin-bottom: 15px;
-    font-size: 20px;
-    letter-spacing: -0.4px;
-  }
-
-  .feature-card li {
-    margin-bottom: 10px;
-    font-size: 14px;
-    letter-spacing: -0.14px;
-  }
-
-  .benefits-section {
-    margin: 0 20px;
-  }
-
-  .benefits-title {
-    margin-bottom: 30px;
-    font-size: 24px;
-    letter-spacing: -0.48px;
-  }
-
-  .benefits-grid {
-    grid-template-columns: 1fr;
-    gap: 25px;
-  }
-
-  .benefit-item {
-    padding: 30px;
-    border-radius: 15px;
-  }
-
-  .benefit-item h4 {
-    margin-bottom: 20px;
-    font-size: 20px;
-    letter-spacing: -0.4px;
-  }
-
-  .benefit-item li {
-    margin-bottom: 12px;
-    font-size: 16px;
-    letter-spacing: -0.16px;
-  }
-}
-
-@media (max-width: 768px) {
   .features-section {
     margin-bottom: 40px;
   }
 
-  .features-section:before {
+  .features-grid {
+    padding: 20px 24px 20px 20px;
+    display: block;
+  }
+
+  .features-grid:before {
     width: 88px;
     height: 93px;
     background: url(../../img/common/bg-symbol-mo.png) center/88px 93px
       no-repeat;
   }
 
-  .features-grid {
-    grid-template-columns: 1fr;
-    gap: 15px;
+  .features-grid:after {
+    right: 12px;
+    bottom: 13px;
+    width: 65px;
+    height: 52px;
+    background: url(../../img/main-features/icon-flower.png) center/65px 52px
+      no-repeat;
   }
 
   .feature-card {
     padding: 20px;
   }
 
-  .feature-card h3 {
-    font-size: 18px;
-    letter-spacing: -0.36px;
+  .feature-card + .feature-card {
+    margin-top: 10px;
+  }
+
+  .feature-card h4 {
+    font-size: 16px;
+    letter-spacing: -0.48px;
+  }
+
+  .feature-card ul {
+    grid-auto-columns: minmax(90px, auto);
+    column-gap: 20px;
+  }
+
+  .feature-card:nth-child(4) ul {
+    display: block;
+  }
+  .feature-card:nth-child(5) ul {
+    display: block;
   }
 
   .feature-card li {
-    font-size: 13px;
-    letter-spacing: -0.13px;
-  }
-
-  .benefit-item {
-    padding: 25px;
-  }
-
-  .benefit-item h4 {
-    font-size: 18px;
-    letter-spacing: -0.36px;
-  }
-
-  .benefit-item li {
     font-size: 14px;
-    letter-spacing: -0.14px;
   }
+
+  .feature-card li:nth-child(odd) {
+    min-width: 90px;
+  }
+
+  .feature-card li:nth-child(even) {
+    text-align: left;
 }
