@@ -108,72 +108,49 @@ main {
 }
 
 /* 혜택 섹션 */
-.benefits-section {
-  margin-top: 80px;
-}
-
-.benefits-title {
-  margin-bottom: 50px;
+.benefits-section h3.title {
+  margin-bottom: 40px;
   color: var(--black);
-  font-size: 28px;
+  font-size: 32px;
   font-weight: 600;
   line-height: normal;
-  letter-spacing: -0.56px;
-  text-align: center;
 }
 
-.benefits-grid {
+.benefit-item + .benefit-item {
+  margin-top: 60px;
+}
+
+.benefit-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 40px;
-}
-
-.benefit-item {
-  padding: 40px;
-  background: var(--white);
-  border-radius: 20px;
-  border: 1px solid var(--bg4);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  grid-template-columns: 265px auto;
+  gap: 30px;
 }
 
 .benefit-item h4 {
-  margin-bottom: 25px;
-  color: var(--light-brown);
-  font-size: 24px;
-  font-weight: 700;
-  line-height: normal;
-  letter-spacing: -0.48px;
-}
-
-.benefit-item ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.benefit-item li {
-  position: relative;
-  padding-left: 25px;
-  margin-bottom: 15px;
   color: var(--black);
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 160%;
-  letter-spacing: -0.18px;
-}
-
-.benefit-item li:before {
-  content: "✓";
-  position: absolute;
-  left: 0;
-  top: 0;
-  color: var(--light-brown);
+  font-size: 32px;
   font-weight: 600;
-  font-size: 16px;
+  line-height: normal;
 }
 
-.benefit-item li:last-child {
-  margin-bottom: 0;
+.benefit-grid-item {
+  list-style: disc;
+}
+
+.benefit-grid-item li {
+  display: flex;
+  color: var(--black);
+  font-size: 20px;
+  line-height: 160%; /* 32px */
+}
+
+.benefit-grid-item li:before {
+  margin: 14px 10px 0 0;
+  content: "";
+  width: 4px;
+  height: 4px;
+  background: var(--black);
+  border-radius: 50%;
 }
 
 /* 반응형 디자인 */
@@ -228,6 +205,7 @@ main {
   .feature-card:nth-child(4) ul {
     display: block;
   }
+
   .feature-card:nth-child(5) ul {
     display: block;
   }
@@ -242,4 +220,35 @@ main {
 
   .feature-card li:nth-child(even) {
     text-align: left;
+  }
+
+  /* 혜택 섹션 */
+  .benefits-section h3.title {
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
+
+  .benefit-item + .benefit-item {
+    margin-top: 20px;
+  }
+
+  .benefit-grid {
+    display: block;
+    gap: 0;
+  }
+
+  .benefit-item h4 {
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+
+  .benefit-grid-item li {
+    font-size: 14px;
+  }
+
+  .benefit-grid-item li:before {
+    width: 3px;
+    height: 3px;
+    margin: 12px 8px 0 8px;
+  }
 }
