@@ -19,8 +19,7 @@ main {
   left: 0;
   width: 224px;
   height: 164px;
-  background: url(../../img/brand-story/brand-story-intro-bg1.png) center/224px
-    164px no-repeat;
+  background: url(../../img/common/bg-symbol.png) center/224px 164px no-repeat;
 }
 
 .story-intro-section:after {
@@ -31,7 +30,7 @@ main {
   bottom: 0;
   width: 214px;
   height: 146px;
-  background: url(../../img/brand-story/brand-story-intro-bg2.png) center/214px
+  background: url(../../img/brand-story/brand-story-intro-bg1.png) center/214px
     146px no-repeat;
 }
 
@@ -50,7 +49,7 @@ main {
   width: 97px;
   height: 89px;
   flex-shrink: 0;
-  background: url(../../img/brand-story/brand-story-intro-bg3.png) center/97px
+  background: url(../../img/brand-story/brand-story-intro-bg2.png) center/97px
     89px no-repeat;
   transform: translate(-35px, -10px) rotate(12.437deg) scale(1.3);
 }
@@ -202,14 +201,14 @@ main {
   .story-intro-section:before {
     width: 88px;
     height: 93px;
-    background: url(../../img/brand-story/brand-story-intro-bg1-mo.png)
-      center/88px 93px no-repeat;
+    background: url(../../img/common/bg-symbol-mo.png) center/88px 93px
+      no-repeat;
   }
 
   .story-intro-section:after {
     width: 88px;
     height: 73px;
-    background: url(../../img/brand-story/brand-story-intro-bg2-mo.png)
+    background: url(../../img/brand-story/brand-story-intro-bg1-mo.png)
       center/88px 73px no-repeat;
   }
 
@@ -222,7 +221,7 @@ main {
     bottom: 0;
     width: 83px;
     height: 75px;
-    background: url(../../img/brand-story/brand-story-intro-bg3.png) center/83px
+    background: url(../../img/brand-story/brand-story-intro-bg2.png) center/83px
       75px no-repeat;
     transform: translate(-19px, -1px) rotate(-10deg) scale(1.3);
   }
