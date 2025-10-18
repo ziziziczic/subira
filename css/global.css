@@ -104,6 +104,10 @@ button {
   overflow: hidden;
 }
 
+.pc-only {
+  display: block;
+}
+
 .mo-only {
   display: none;
 }
@@ -128,6 +132,10 @@ button {
   h2.title .breadcrumb {
     font-size: 12px;
     letter-spacing: -0.36px;
+  }
+
+  .pc-only {
+    display: none;
   }
 
   .mo-only {
