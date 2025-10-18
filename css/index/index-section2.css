@@ -43,9 +43,10 @@
     height: auto;
   }
   .standard-area ul li a span {
-    top: 20px;
+    top: 50%;
     left: 30px;
     font-size: 18px;
+    transform: translateY(-50%);
   }
   .standard-area a .pc-img {
     display: none;
