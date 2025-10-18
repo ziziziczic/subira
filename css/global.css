@@ -58,11 +58,8 @@ section {
   width: 1280px;
 }
 
-h2 {
-  margin-bottom: 80px;
-}
-
 h2.title {
+  margin-bottom: 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -115,10 +112,13 @@ button {
   }
 
   h2.title {
+    margin-bottom: 20px;
+    padding: 0 20px;
+    font-size: 24px;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    font-size: 24px;
     gap: 10px;
   }
 
