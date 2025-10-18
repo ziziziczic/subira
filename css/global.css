@@ -87,14 +87,6 @@ a {
   color: inherit;
 }
 
-.blind {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
 button,
 input[type="button"] {
   background: none;
@@ -103,6 +95,17 @@ input[type="button"] {
 
 button {
   cursor: pointer;
+}
+.blind {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.mo-only {
+  display: none;
 }
 
 @media (max-width: 1280px) {
@@ -125,5 +128,9 @@ button {
   h2.title .breadcrumb {
     font-size: 12px;
     letter-spacing: -0.36px;
+  }
+
+  .mo-only {
+    display: block;
   }
 }

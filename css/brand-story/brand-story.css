@@ -65,10 +65,6 @@ main {
   letter-spacing: -0.72px;
 }
 
-.story-intro-content p .mo-only {
-  display: none;
-}
-
 .story-intro-content b {
   font-weight: 600;
 }
@@ -126,6 +122,7 @@ main {
 }
 
 .korean-character .meaning {
+  text-align: center;
   color: var(--white);
   font-size: 20px;
   font-weight: 700;
@@ -149,6 +146,13 @@ main {
   font-weight: 600;
   line-height: normal;
   letter-spacing: -0.44px;
+}
+
+.story-content h3 b {
+  color: var(--light-brown);
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.48px;
 }
 
 .story-content dl {
@@ -228,7 +232,88 @@ main {
     letter-spacing: -0.48px;
   }
 
-  .story-intro-content p .mo-only {
-    display: block;
+  /* 핵심 가치 섹션 */
+  .story-section {
+    display: flex;
+    gap: 20px;
+  }
+
+  .story-section + .story-section {
+    margin-top: 20px;
+  }
+
+  /* 좌측 한자 영역 스타일 */
+  .korean-character {
+    width: 75px;
+    height: 316px;
+    border-radius: 10px;
+  }
+
+  .korean-character:after {
+    display: none;
+  }
+
+  .korean-character .char-box {
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 140%; /* 19.6px */
+    letter-spacing: -0.14px;
+  }
+
+  .korean-character .char-title {
+    margin-bottom: 10px;
+    font-size: 30px;
+    letter-spacing: -0.3px;
+  }
+
+  .korean-character .meaning {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 140%; /* 19.6px */
+    letter-spacing: -0.14px;
+  }
+
+  /* 우측 상세 내용 스타일 */
+  .story-content {
+    padding-top: 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .story-content h3 {
+    font-size: 16px;
+    letter-spacing: -0.32px;
+  }
+
+  .story-content h3 b {
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: -0.32px;
+  }
+
+  .story-content dl {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 10px;
+    column-gap: 0px;
+  }
+
+  .story-content dt {
+    width: 57px;
+    height: 18px;
+    font-size: 12px;
+    letter-spacing: -0.12px;
+  }
+
+  .story-content dd {
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: -0.14px;
   }
 }
