@@ -184,8 +184,6 @@ main {
 
 .comparison-table th,
 .comparison-table td {
-  padding: 10px 0;
-  min-height: 86px;
   color: var(--black);
   text-align: center;
   font-size: 24px;
@@ -226,6 +224,14 @@ main {
   font-size: 26px;
   font-weight: 700;
   color: #2f54a7;
+}
+
+.comparison-table tbody td div {
+  padding: 10px 0;
+  min-height: 86px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .comparison-table tbody tr:last-child td {
