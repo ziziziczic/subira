@@ -1,0 +1,374 @@
+/* 바로 비교하기 페이지 스타일 */
+main {
+  padding: 73px 0 150px;
+  overflow: hidden;
+}
+
+/* 소개 섹션 */
+.intro-section {
+  margin-bottom: 150px;
+}
+
+.intro-content-box {
+  padding: 60px 60px 55px;
+  background: var(--bg5);
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.intro-content-box:before {
+  z-index: 1;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 224px;
+  height: 164px;
+  background: url(../../img/common/bg-symbol.png) center/224px 164px no-repeat;
+}
+
+.intro-content {
+  margin-bottom: 66px;
+}
+
+.intro-content h3.title {
+  margin-bottom: 80px;
+  color: var(--black);
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 170%; /* 51px */
+  letter-spacing: -0.9px;
+}
+
+.intro-content p {
+  color: var(--black);
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 170%;
+  letter-spacing: -0.72px;
+}
+
+/* 사용자 후기 */
+
+.testimonials-list {
+  padding: 0 0 0 143px;
+}
+
+.testimonial-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.testimonial-item + .testimonial-item {
+  margin-top: 36px;
+}
+
+.testimonial-item:nth-child(2) {
+  padding-left: 223px;
+}
+
+.testimonial-avatar {
+  position: relative;
+  flex-shrink: 0;
+  padding-bottom: 25px;
+}
+
+.testimonial-avatar img {
+  display: block;
+  width: 149px;
+  height: 208px;
+}
+
+.testimonial-avatar-info {
+  z-index: 1;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.8);
+  white-space: nowrap;
+}
+
+.testimonial-avatar-info span {
+  color: var(--black);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 170%; /* 30.6px */
+  letter-spacing: -0.54px;
+  white-space: nowrap;
+}
+
+.testimonial-bubble {
+  position: relative;
+  margin-top: 10px;
+  padding: 30px;
+  border-radius: 20px;
+  background: var(--bg6);
+}
+
+.testimonial-bubble:before {
+  content: "";
+  position: absolute;
+  bottom: -17px;
+  width: 44px;
+  height: 23px;
+}
+
+.testimonial-bubble p {
+  color: var(--white);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 170%; /* 30.6px */
+  letter-spacing: -0.54px;
+}
+
+.testimonial-item:nth-child(odd) .testimonial-bubble:before {
+  left: 34px;
+  background: url(../../img/compare-now/bubble-left-arrow.png) center/44px 23px
+    no-repeat;
+}
+
+.testimonial-item:nth-child(even) .testimonial-bubble:before {
+  right: 34px;
+  background: url(../../img/compare-now/bubble-right-arrow.png) center/44px 23px
+    no-repeat;
+}
+
+.testimonial-item:nth-child(1) .testimonial-bubble {
+  width: 647px;
+}
+
+.testimonial-item:nth-child(2) .testimonial-bubble {
+  width: 568px;
+}
+
+/* 비교표 섹션 */
+.comparison-section .title {
+  margin-bottom: 40px;
+  color: var(--black);
+  font-size: 32px;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.comparison-description {
+  margin-bottom: 40px;
+}
+
+.comparison-description p {
+  color: var(--black3);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 160%; /* 28.8px */
+  letter-spacing: -0.54px;
+}
+
+.comparison-table-wrapper {
+  overflow-x: auto;
+  border-radius: 20px;
+  border: 1px solid #eee;
+  background: var(--white);
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 800px;
+}
+
+.comparison-table th,
+.comparison-table td {
+  padding: 30px 20px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+  vertical-align: top;
+}
+
+.comparison-table th {
+  background: var(--bg4);
+  color: var(--black);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -0.6px;
+}
+
+.comparison-table td {
+  color: var(--black);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 160%; /* 28.8px */
+  letter-spacing: -0.54px;
+}
+
+.comparison-table .item-column {
+  width: 15%;
+  background: var(--bg5);
+  font-weight: 600;
+}
+
+.comparison-table .cs-column {
+  width: 42.5%;
+}
+
+.comparison-table .subira-column {
+  width: 42.5%;
+  background: rgba(139, 69, 19, 0.05);
+}
+
+.comparison-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 1280px) {
+  main {
+    padding: 40px 0 70px;
+  }
+
+  /* 소개 섹션 */
+  .intro-section {
+    margin-bottom: 40px;
+  }
+
+  .intro-content-box {
+    padding: 20px;
+  }
+
+  .intro-content-box:before {
+    width: 88px;
+    height: 93px;
+    background: url(../../img/common/bg-symbol-mo.png) center/88px 93px
+      no-repeat;
+  }
+
+  .intro-content h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    line-height: 140%; /* 25.2px */
+    letter-spacing: -0.54px;
+  }
+
+  .intro-content p {
+    font-size: 16px;
+    letter-spacing: -0.48px;
+  }
+
+  /* 사용자 후기 섹션 */
+  .testimonials-section {
+    margin-bottom: 40px;
+  }
+
+  .testimonials-grid {
+    display: block;
+    gap: 0;
+  }
+
+  .testimonial-item {
+    margin-bottom: 30px;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .testimonial-item:last-child {
+    margin-bottom: 0;
+  }
+
+  .testimonial-avatar {
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+  }
+
+  .testimonial-info {
+    align-items: flex-start;
+    gap: 3px;
+    min-width: 80px;
+  }
+
+  .testimonial-info .role {
+    font-size: 14px;
+  }
+
+  .testimonial-info .age {
+    font-size: 12px;
+  }
+
+  .testimonial-bubble {
+    flex: 1;
+    padding: 20px;
+    border-radius: 15px;
+  }
+
+  .testimonial-bubble:before {
+    top: 20px;
+    left: -10px;
+    transform: none;
+    border-left: 10px solid transparent;
+    border-right: 10px solid var(--white);
+    border-bottom: 10px solid transparent;
+    border-top: 10px solid transparent;
+  }
+
+  .testimonial-bubble:after {
+    top: 20px;
+    left: -11px;
+    transform: none;
+    border-left: 11px solid transparent;
+    border-right: 11px solid #eee;
+    border-bottom: 11px solid transparent;
+    border-top: 11px solid transparent;
+  }
+
+  .testimonial-bubble p {
+    font-size: 14px;
+    letter-spacing: -0.42px;
+  }
+
+  /* 비교표 섹션 */
+  .comparison-section .title {
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
+
+  .comparison-description {
+    margin-bottom: 20px;
+  }
+
+  .comparison-description p {
+    font-size: 14px;
+    letter-spacing: -0.42px;
+  }
+
+  .comparison-table th,
+  .comparison-table td {
+    padding: 15px 10px;
+  }
+
+  .comparison-table th {
+    font-size: 14px;
+    letter-spacing: -0.42px;
+  }
+
+  .comparison-table td {
+    font-size: 12px;
+    letter-spacing: -0.36px;
+  }
+
+  .comparison-table .item-column {
+    width: 20%;
+  }
+
+  .comparison-table .cs-column {
+    width: 40%;
+  }
+
+  .comparison-table .subira-column {
+    width: 40%;
+  }
+}
