@@ -162,37 +162,12 @@ main {
 }
 
 /* 기회 섹션 */
-.opportunity-section {
-  flex-grow: 1;
-  background: var(--bg5);
-  border-radius: 20px;
-  position: relative;
-  overflow: hidden;
-}
-
-.opportunity-section:before {
-  z-index: 1;
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 224px;
-  height: 164px;
-  background: url(../../img/common/bg-symbol.png) center/224px 164px no-repeat;
-}
-
-.opportunity-content {
-  position: relative;
-  z-index: 2;
-}
-
-.opportunity-content h3 {
-  margin-bottom: 30px;
+.opportunity-section .title {
+  margin-bottom: 40px;
   color: var(--black);
   font-size: 32px;
   font-weight: 600;
   line-height: normal;
-  letter-spacing: -0.96px;
 }
 
 .opportunity-content p {
@@ -200,7 +175,10 @@ main {
   font-size: 20px;
   font-weight: 400;
   line-height: 160%; /* 32px */
-  letter-spacing: -0.6px;
+}
+
+.opportunity-section p b {
+  font-weight: 600;
 }
 
 /* 반응형 디자인 */
@@ -343,26 +321,21 @@ main {
   }
 
   /* 기회 섹션 */
-  .opportunity-section {
-    margin: 0 20px;
-    padding: 20px;
-  }
-
-  .opportunity-section:before {
-    width: 88px;
-    height: 93px;
-    background: url(../../img/common/bg-symbol-mo.png) center/88px 93px
-      no-repeat;
-  }
-
-  .opportunity-content h3 {
-    margin-bottom: 20px;
+  .opportunity-section .title {
+    margin-bottom: 10px;
     font-size: 18px;
-    letter-spacing: -0.54px;
   }
 
   .opportunity-content p {
     font-size: 14px;
-    letter-spacing: -0.42px;
+  }
+
+  .opportunity-section p b {
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  .opportunity-content p + p {
+    margin-top: 30px;
   }
 }
