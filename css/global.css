@@ -11,6 +11,7 @@
   --dark-brown: #523a22;
 
   --blue: #00a8da;
+  --purple: #b5c8f3;
 
   --gray7: #757575;
   --light-gray: #ebebeb;
@@ -26,6 +27,7 @@
   --bg4: #f4f0e4;
   --bg5: #f8f8f8;
   --bg6: #4e4e4e;
+  --bg7: #f3f3f3;
 }
 
 * {

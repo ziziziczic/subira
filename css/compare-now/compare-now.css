@@ -148,77 +148,84 @@ main {
 }
 
 /* 비교표 섹션 */
-.comparison-section .title {
+.comparison-description {
+  position: relative;
   margin-bottom: 40px;
-  color: var(--black);
-  font-size: 32px;
-  font-weight: 600;
-  line-height: normal;
+  padding-left: 15px;
 }
 
-.comparison-description {
-  margin-bottom: 40px;
+.comparison-description:before {
+  content: "";
+  position: absolute;
+  top: 14px;
+  left: 0;
+  width: 4px;
+  height: 4px;
+  background: var(--black);
+  border-radius: 50%;
 }
 
 .comparison-description p {
-  color: var(--black3);
-  font-size: 18px;
+  color: #000;
+  font-size: 24px;
   font-weight: 400;
-  line-height: 160%; /* 28.8px */
-  letter-spacing: -0.54px;
+  line-height: 34px; /* 141.667% */
 }
 
 .comparison-table-wrapper {
   overflow-x: auto;
   border-radius: 20px;
-  border: 1px solid #eee;
-  background: var(--white);
+  border: 1px solid var(--border);
 }
 
 .comparison-table {
-  width: 100%;
   border-collapse: collapse;
-  min-width: 800px;
 }
 
 .comparison-table th,
 .comparison-table td {
-  padding: 30px 20px;
-  text-align: left;
-  border-bottom: 1px solid #eee;
-  vertical-align: top;
-}
-
-.comparison-table th {
-  background: var(--bg4);
+  padding: 10px 0;
+  min-height: 86px;
   color: var(--black);
-  font-size: 20px;
-  font-weight: 600;
-  line-height: normal;
-  letter-spacing: -0.6px;
-}
-
-.comparison-table td {
-  color: var(--black);
-  font-size: 18px;
+  text-align: center;
+  font-size: 24px;
   font-weight: 400;
-  line-height: 160%; /* 28.8px */
-  letter-spacing: -0.54px;
+  line-height: 34px; /* 141.667% */
+  border-bottom: 1px solid var(--border);
 }
 
 .comparison-table .item-column {
-  width: 15%;
-  background: var(--bg5);
-  font-weight: 600;
+  width: 207px;
+  background: var(--bg7);
+  border-right: 1px solid var(--border);
 }
 
 .comparison-table .cs-column {
-  width: 42.5%;
+  width: 536px;
+  border-right: 1px solid var(--border);
 }
 
 .comparison-table .subira-column {
-  width: 42.5%;
-  background: rgba(139, 69, 19, 0.05);
+  width: 536px;
+}
+
+.comparison-table thead th:nth-child(2) {
+  height: 119px;
+  font-weight: 600;
+  background: var(--bg7);
+}
+
+.comparison-table thead th:last-child {
+  height: 119px;
+  font-weight: 600;
+  background: var(--purple);
+  color: #2f54a7;
+}
+
+.comparison-table thead th:last-child b {
+  font-size: 26px;
+  font-weight: 700;
+  color: #2f54a7;
 }
 
 .comparison-table tbody tr:last-child td {
