@@ -174,45 +174,46 @@ main {
 }
 
 /* 문의 섹션 */
-.inquiry-section {
-  margin-bottom: 0;
-}
-
-.inquiry-box {
-  padding: 40px;
+.inquiry-section .inquiry-box {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
   background: var(--bg4);
   border-radius: 20px;
+  border: 1px solid var(--border);
 }
 
-.inquiry-header {
+.inquiry-section .inquiry-header {
   display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 15px;
-  margin-bottom: 20px;
 }
 
-.inquiry-header img:first-child {
-  width: 24px;
-  height: 24px;
+.inquiry-section .inquiry-header img {
+  display: block;
+  width: 32px;
+  height: 32px;
 }
 
-.inquiry-header h3 {
+.inquiry-section .inquiry-header h3 {
+  margin: 0 4px 0 12px;
   color: var(--black);
-  font-size: 24px;
+  font-size: 30px;
   font-weight: 600;
-  line-height: normal;
+  line-height: 140%; /* 42px */
+  letter-spacing: -0.6px;
 }
 
-.inquiry-header img:last-child {
-  width: 24px;
-  height: 24px;
-}
-
-.inquiry-content p {
+.inquiry-section .inquiry-content p {
   color: var(--black);
-  font-size: 20px;
+  text-align: center;
+  font-size: 22px;
   font-weight: 400;
-  line-height: 160%;
+  line-height: 140%; /* 30.8px */
+  letter-spacing: -0.44px;
 }
 
 /* 반응형 디자인 */
@@ -325,30 +326,28 @@ main {
   }
 
   /* 문의 섹션 */
-  .inquiry-box {
-    padding: 20px;
+  .inquiry-section {
+    padding: 0 20px;
   }
 
-  .inquiry-header {
-    gap: 10px;
-    margin-bottom: 15px;
+  .inquiry-section .inquiry-box {
+    height: 176px;
   }
 
-  .inquiry-header img:first-child {
-    width: 20px;
-    height: 20px;
+  .inquiry-section .inquiry-header img {
+    width: 24px;
+    height: 24px;
   }
 
-  .inquiry-header h3 {
-    font-size: 18px;
+  .inquiry-section .inquiry-header h3 {
+    margin: 0 4px 0 12px;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -0.48px;
   }
 
-  .inquiry-header img:last-child {
-    width: 20px;
-    height: 20px;
-  }
-
-  .inquiry-content p {
+  .inquiry-section .inquiry-content p {
     font-size: 16px;
+    letter-spacing: -0.32px;
   }
 }
