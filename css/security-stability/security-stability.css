@@ -158,6 +158,49 @@ main {
   width: 647px;
 }
 
+/* 수비라 주요 보안 기능 */
+.security-section .title {
+  margin-bottom: 40px;
+  color: var(--black);
+  font-size: 32px;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.security-list {
+  margin-bottom: 40px;
+}
+
+.security-list li + li {
+  margin-top: 40px;
+}
+
+.security-list dt {
+  color: var(--black);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 160%; /* 32px */
+}
+
+.security-list dd {
+  color: var(--black);
+  font-family: Pretendard;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 160%;
+}
+
+.security-description {
+  color: var(--black);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 160%; /* 32px */
+}
+
+.security-description b {
+  font-weight: 600;
+}
+
 /* 반응형 디자인 */
 @media (max-width: 1280px) {
   main {
@@ -266,5 +309,31 @@ main {
     height: 23px;
     background: url(../../img/compare-now/bubble-right-arrow.png) center/contain
       no-repeat;
+  }
+
+  .security-section .title {
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
+
+  .security-list {
+    margin-bottom: 20px;
+  }
+
+  .security-list li + li {
+    margin-top: 20px;
+  }
+
+  .security-list dt {
+    font-size: 18px;
+  }
+
+  .security-list dd {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+
+  .security-description {
+    font-size: 14px;
   }
 }
