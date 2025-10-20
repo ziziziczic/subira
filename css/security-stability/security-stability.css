@@ -185,7 +185,6 @@ main {
   }
 
   .intro-content h3.title {
-    margin-bottom: 10px;
     font-size: 18px;
     line-height: 140%; /* 25.2px */
     letter-spacing: -0.54px;
@@ -196,14 +195,17 @@ main {
     letter-spacing: -0.48px;
   }
 
+  .intro-content p + p {
+    margin-top: 40px;
+  }
+
   /* 사용자 후기 */
   .testimonials-list {
     padding: 0;
   }
 
   .testimonial-item {
-    align-items: flex-end;
-    gap: 6px;
+    gap: 20px;
   }
 
   .testimonial-item + .testimonial-item {
@@ -238,13 +240,31 @@ main {
 
   .testimonial-bubble {
     margin-top: 0;
-    margin-bottom: 70px;
     padding: 10px 15px;
   }
 
   .testimonial-bubble p {
     font-size: 14px;
-    line-height: 170%;
     letter-spacing: -0.42px;
+  }
+
+  .testimonial-item:nth-child(odd) .testimonial-bubble:before {
+    bottom: initial;
+    top: 26px;
+    left: -13px;
+    width: 41px;
+    height: 23px;
+    background: url(../../img/compare-now/bubble-left-arrow.png) center/contain
+      no-repeat;
+  }
+
+  .testimonial-item:nth-child(even) .testimonial-bubble:before {
+    bottom: initial;
+    top: 26px;
+    right: -13px;
+    width: 41px;
+    height: 23px;
+    background: url(../../img/compare-now/bubble-right-arrow.png) center/contain
+      no-repeat;
   }
 }
