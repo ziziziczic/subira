@@ -81,7 +81,7 @@ main {
 
 /* 제작 단계 섹션 */
 .steps-section {
-  margin-bottom: 150px;
+  margin-bottom: 40px;
 }
 
 .steps-section .title {
@@ -93,111 +93,84 @@ main {
 }
 
 .steps-list {
+  margin-bottom: 40px;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 20px;
 }
 
 .step-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 30px;
   padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
   background: var(--white);
   border-radius: 20px;
-  border: 1px solid var(--border);
+  border: 1px solid #eee;
 }
 
-.step-icon {
-  flex-shrink: 0;
-  width: 80px;
-  height: 80px;
+.step-header {
   display: flex;
-  justify-content: center;
   align-items: center;
-  background: var(--bg4);
-  border-radius: 50%;
 }
 
-.step-icon img {
+.step-header .step-icon {
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+
+.step-header .step-icon img {
+  display: block;
   width: 40px;
   height: 40px;
 }
 
-.step-content {
-  flex: 1;
-}
-
-.step-number {
+.step-header .step-number {
+  margin-right: 10px;
   color: var(--light-brown);
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 600;
-  line-height: 35px;
-  margin-bottom: 10px;
+  line-height: 35px; /* 116.667% */
 }
 
-.step-content h4 {
-  margin-bottom: 15px;
+.step-header h4 {
+  color: var(--light-brown);
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 35px; /* 116.667% */
+}
+
+.step-content li {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 20px;
   color: var(--black);
   font-size: 24px;
-  font-weight: 600;
-  line-height: normal;
-}
-
-.step-content p {
-  color: var(--black);
-  font-size: 20px;
   font-weight: 400;
-  line-height: 160%;
+  line-height: 140%; /* 33.6px */
 }
 
-/* 서브 스텝 (제작 단계의 세부 항목) */
-.sub-steps {
+.step-content li:before {
+  flex-shrink: 0;
+  content: "";
+  width: 6px;
+  height: 6px;
+  background: #333;
+  border-radius: 50%;
+}
+
+.step-content li + li {
   margin-top: 20px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-}
-
-.sub-step {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.sub-step strong {
-  color: var(--light-brown);
-  font-size: 18px;
-  font-weight: 600;
-  line-height: normal;
-}
-
-.sub-step span {
-  color: var(--black);
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 160%;
 }
 
 /* 제작 기간 및 비용 안내 */
-.timeline-note {
-  margin-top: 40px;
-  padding: 20px;
-  background: var(--bg7);
-  border-radius: 10px;
-}
-
 .timeline-note p {
   color: var(--black);
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 400;
-  line-height: 160%;
-}
-
-.asterisk {
-  color: var(--light-brown);
-  font-weight: 600;
-  margin-right: 5px;
+  line-height: 160%; /* 32px */
 }
 
 /* 문의 섹션 */
@@ -300,7 +273,7 @@ main {
 
   /* 제작 단계 섹션 */
   .steps-section {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
   }
 
   .steps-section .title {
@@ -309,64 +282,46 @@ main {
   }
 
   .steps-list {
-    gap: 20px;
+    margin-bottom: 20px;
+    gap: 10px;
   }
 
   .step-item {
     padding: 20px;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 20px;
+    gap: 10px;
   }
 
-  .step-icon {
-    width: 60px;
-    height: 60px;
+  .step-header .step-icon {
+    margin-right: 10px;
   }
 
-  .step-icon img {
-    width: 30px;
-    height: 30px;
+  .step-header .step-icon img {
+    width: 24px;
+    height: 24px;
   }
 
-  .step-number {
-    font-size: 24px;
-    line-height: 140%;
-  }
-
-  .step-content h4 {
+  .step-header .step-number {
     font-size: 18px;
-    margin-bottom: 10px;
   }
 
-  .step-content p {
-    font-size: 14px;
+  .step-header h4 {
+    font-size: 18px;
   }
 
-  /* 서브 스텝 */
-  .sub-steps {
-    grid-template-columns: 1fr;
-    gap: 15px;
-    margin-top: 15px;
-  }
-
-  .sub-step strong {
+  .step-content li {
     font-size: 16px;
+    gap: 10px;
   }
 
-  .sub-step span {
-    font-size: 14px;
+  .step-content li:before {
+    width: 4px;
+    height: 4px;
   }
 
   /* 제작 기간 및 비용 안내 */
-  .timeline-note {
-    margin-top: 20px;
-    padding: 15px;
-  }
-
   .timeline-note p {
     font-size: 14px;
+    line-height: 140%; /* 19.6px */
   }
 
   /* 문의 섹션 */
