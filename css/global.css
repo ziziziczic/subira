@@ -4,6 +4,7 @@
   --black: #000;
   --black0: #0c0c0c;
   --black1: #1a1a1a;
+  --black2: #0c0c0c;
   --black3: #333;
 
   --light-brown: #3a3413;
@@ -12,7 +13,9 @@
 
   --blue: #00a8da;
   --purple: #b5c8f3;
+  --red: #ea4754;
 
+  --gray3: #b3b3b3;
   --gray7: #757575;
   --light-gray: #ebebeb;
   --gray: #fafafa;
@@ -28,6 +31,7 @@
   --bg5: #f8f8f8;
   --bg6: #4e4e4e;
   --bg7: #f3f3f3;
+  --bg8: #fafafa;
 }
 
 * {
@@ -106,6 +110,12 @@ input[type="button"] {
 button {
   cursor: pointer;
 }
+
+input[type="text"],
+input[type="email"] {
+  outline: none;
+}
+
 .blind {
   position: absolute;
   width: 1px;
@@ -120,6 +130,10 @@ button {
 
 .mo-only {
   display: none;
+}
+
+.h-100 {
+  height: 100%;
 }
 
 @media (max-width: 1280px) {

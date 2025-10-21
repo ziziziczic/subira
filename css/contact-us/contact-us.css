@@ -6,85 +6,85 @@ main {
 
 /* 안내 섹션 */
 .intro-section {
+  margin-top: 140px;
   margin-bottom: 40px;
 }
 
-.intro-text {
+/* 안내 문구  */
+.intro-section .intro-text {
   color: var(--black);
-  font-size: 20px;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 170%; /* 51px */
+  letter-spacing: -0.9px;
 }
 
 /* 폼 섹션 */
-.contact-section {
-  margin-bottom: 70px;
-}
-
-.contact-form {
-  border-top: 1px solid var(--border);
-}
-
 .form-row {
   display: grid;
-  grid-template-columns: 200px 1fr;
+  grid-template-columns: 183px 1fr;
   align-items: center;
-  gap: 20px;
-  padding: 16px 0;
-  border-bottom: 1px solid var(--border);
 }
 
-.form-row--inline {
-  grid-template-columns: 200px 1fr;
+.form-row.bordered-top {
+  border-top: 1px solid var(--black);
 }
 
-.form-row.bordered {
-  background: var(--bg5);
-  border-radius: 8px;
-  padding: 20px;
-  border: 1px solid var(--border);
-  margin-bottom: 20px;
+.form-row.bordered-bottom {
+  border-bottom: 1px solid var(--light-gray);
 }
 
 .form-label {
-  color: var(--black);
-  font-size: 18px;
-  font-weight: 600;
+  padding: 0px 24px;
+  min-height: 96px;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 140%; /* 22.4px */
+  color: var(--black2);
+  background: var(--bg8);
 }
 
 .form-label.required:after {
+  margin-left: 4px;
   content: " *";
-  color: #ff5b5b;
+  color: var(--red);
 }
 
-input[type="text"],
-textarea,
-select {
+.form-content {
+  padding: 0 24px;
   width: 100%;
-  padding: 12px 14px;
-  border-radius: 10px;
-  border: 1px solid var(--border);
-  background: var(--white);
-  font-size: 16px;
+  height: inherit;
+}
+
+select {
+  appearance: none; /* 표준 속성 */
+  -webkit-appearance: none; /* Safari/Chrome */
+  -moz-appearance: none; /* Firefox */
+  background: none; /* 필요 시 배경 제거 */
+  border: 1px solid var(--border); /* 기본 테두리 설정 */
 }
 
 textarea {
   resize: vertical;
-  min-height: 180px;
+  min-height: 395px;
 }
 
 /* 라디오 */
 .radio-group {
   display: flex;
-  gap: 20px;
+  gap: 28px;
 }
 
 .radio {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   font-size: 16px;
 }
 
-label:before {
+.radio-group label:before {
   content: "";
   width: 20px;
   height: 20px;
@@ -92,7 +92,7 @@ label:before {
     center center / contain;
 }
 
-input[type="radio"]:checked + label:before {
+.radio-group input[type="radio"]:checked + label:before {
   content: "";
   width: 20px;
   height: 20px;
@@ -100,23 +100,89 @@ input[type="radio"]:checked + label:before {
     center / contain;
 }
 
+.radio-item label {
+  cursor: pointer;
+}
+
+.radio-item label span {
+  color: var(--black2);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 140%; /* 22.4px */
+}
+
+.form-row input[type="text"] {
+  padding: 0 16px;
+  display: block;
+  width: 335px;
+  height: 48px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 160%; /* 22.4px */
+  color: var(--black2);
+  border-radius: 4px;
+  border: 1px solid var(--border);
+}
+
+form-row input[type="text"]::placeholder {
+  color: var(--gray3);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 160%; /* 22.4px */
+}
+
 /* 연락처 */
 .phone-group {
-  display: grid;
-  grid-template-columns: 140px 1fr 1fr;
-  gap: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.phone-group .select {
+  padding: 13px 16px;
+  width: 200px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: url(../../img/contact-us/icon-down-arrow.png) center right 16px/ 20px
+    20px no-repeat;
+}
+
+.phone-group input[type="text"] {
+  width: 117px;
 }
 
 /* 이메일 */
 .email-group {
-  display: grid;
-  grid-template-columns: 1fr 30px 1fr 160px;
-  gap: 10px;
+  display: flex;
   align-items: center;
+  gap: 8px;
 }
 
 .email-group .at {
   text-align: center;
+}
+
+.email-group input[type="text"]:first-child {
+  width: 200px;
+}
+
+.email-group input[type="text"]:last-child {
+  width: 260px;
+}
+
+.email-group .select {
+  padding: 13px 16px;
+  width: 200px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: url(../../img/contact-us/icon-down-arrow.png) center right 16px/ 20px
+    20px no-repeat;
 }
 
 /* 개인정보 동의 */
@@ -186,20 +252,22 @@ input[type="radio"]:checked + label:before {
     padding: 40px 0 70px;
   }
 
-  .intro-text {
-    font-size: 16px;
+  /* 안내 섹션 */
+  .intro-section {
+    margin-top: 40px;
   }
+
+  .intro-section .intro-text {
+    font-size: 18px;
+    letter-spacing: -0.54px;
+  }
+
+  /* 폼 섹션 */
 
   .contact-form {
-    border-top: none;
   }
 
-  .form-row,
-  .form-row--inline {
-    grid-template-columns: 1fr;
-    gap: 8px;
-    padding: 10px 0;
-    border-bottom: none;
+  .form-row {
   }
 
   .form-label {
