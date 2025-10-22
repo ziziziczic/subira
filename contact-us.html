@@ -65,7 +65,7 @@
 
             <div class="form-content">
               <div class="radio-group">
-                <div class="radio-item">
+                <div class="radio-item mr-12">
                   <input
                     id="subira"
                     type="radio"
@@ -140,10 +140,6 @@
               <div class="phone-group">
                 <select aria-label="전화 앞자리" class="select">
                   <option value="010" selected>010</option>
-                  <option value="011">011</option>
-                  <option value="016">016</option>
-                  <option value="017">017</option>
-                  <option value="019">019</option>
                   <option value="02">02</option>
                   <option value="031">031</option>
                   <option value="032">032</option>
@@ -181,17 +177,16 @@
             <div class="form-content">
               <div class="email-group">
                 <input
-                  id="email"
+                  id="email-id"
                   type="text"
                   placeholder="이메일을 입력해 주세요."
                 />
                 <span class="at">@</span>
-                <input type="text" placeholder="직접입력" />
+                <input id="email-domain" type="text" placeholder="직접입력" />
                 <select class="select" aria-label="도메인 선택">
                   <option value="">직접 입력</option>
                   <option>naver.com</option>
                   <option>gmail.com</option>
-                  <option>hanmail.net</option>
                 </select>
               </div>
             </div>
@@ -199,7 +194,9 @@
 
           <!-- 내용 -->
           <div class="form-row bordered-bottom">
-            <label for="content" class="form-label required h-100">내용</label>
+            <label for="content" class="form-label required content h-100"
+              >내용</label
+            >
             <div class="form-content">
               <textarea
                 id="content"
@@ -210,7 +207,7 @@
           </div>
 
           <!-- 개인정보 동의 -->
-          <div class="form-row bordered-bottom">
+          <div class="form-row bordered-bottom privacy">
             <label for="content" class="form-label h-100"
               >개인정보 수집 및<br class="pc-only" />이용 동의 안내
             </label>
