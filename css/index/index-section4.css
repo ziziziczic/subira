@@ -83,12 +83,10 @@
   cursor: pointer;
 }
 
-.portfolio-btn:after {
-  margin-bottom: 5px;
-  content: "";
+.portfolio-btn img {
+  display: block;
   width: 24px;
   height: 24px;
-  background: url(../img/icon-more.png) center/24px no-repeat;
 }
 
 @media (max-width: 1280px) {
@@ -156,11 +154,8 @@
     font-size: 16px;
   }
 
-  .portfolio-btn:after {
-    margin-bottom: 5px;
-    content: "";
+  .portfolio-btn img {
     width: 20px;
     height: 20px;
-    background-size: 20px;
   }
 }
