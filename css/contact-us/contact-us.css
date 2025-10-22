@@ -100,6 +100,11 @@ textarea {
     center / contain;
 }
 
+.radio-item {
+  display: flex;
+  align-items: center;
+}
+
 .radio-item label {
   cursor: pointer;
 }
@@ -185,65 +190,91 @@ form-row input[type="text"]::placeholder {
     20px no-repeat;
 }
 
+.form-content textarea {
+  margin: 24px 0;
+  padding: 13px 16px;
+  width: 100%;
+  color: var(--black0);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 160%; /* 22.4px */
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  outline: none;
+}
+
+.form-content textarea::placeholder {
+  color: var(--gray3);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 160%; /* 22.4px */
+}
+
 /* 개인정보 동의 */
 .privacy-box {
-  margin-top: 20px;
-  padding: 20px;
-  border-radius: 12px;
-  border: 1px solid var(--border);
-  background: var(--bg5);
+  padding: 24px 0;
 }
 
-.privacy-box h4 {
-  margin-bottom: 12px;
-  font-size: 18px;
-  font-weight: 600;
-}
-
-.privacy-box ol {
-  margin-left: 18px;
-  margin-bottom: 12px;
+.privacy-box ul {
+  margin-bottom: 24px;
 }
 
 .privacy-box li {
-  color: var(--black);
+  color: var(--black0);
   font-size: 14px;
-  line-height: 160%;
+  font-weight: 400;
+  line-height: 140%; /* 19.6px */
 }
 
-.privacy-box .agree {
-  margin-top: 12px;
+.privacy-box p {
+  color: var(--black0);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 140%; /* 19.6px */
+}
+
+.privacy-box .agree .radio-item {
+  height: 48px;
 }
 
 .notice {
-  margin-top: 10px;
+  margin-top: 20px;
   color: var(--gray7);
   font-size: 14px;
+  font-weight: 400;
+  line-height: 140%; /* 19.6px */
 }
 
 /* 버튼 */
 .form-actions {
-  margin-top: 20px;
+  margin-top: 30px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   gap: 10px;
 }
 
 .btn {
-  min-width: 120px;
-  padding: 12px 18px;
-  border-radius: 8px;
-  font-size: 16px;
-  font-weight: 600;
+  width: 150px;
+  height: 60px;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 140%; /* 30.8px */
+  letter-spacing: -0.66px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 4px;
 }
 
 .btn--primary {
-  background: var(--black1);
-  color: var(--white);
+  color: var(--black);
+  border: 1px solid var(--border);
 }
 
 .btn--secondary {
-  background: var(--bg3);
+  color: var(--white);
+  background: var(--black3);
 }
 
 /* 반응형 */
