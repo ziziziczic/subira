@@ -31,7 +31,8 @@ section h3 a:after {
   content: "";
   width: 24px;
   height: 24px;
-  background: url(../img/icon-right-arrow-gray-24x24.png) center/24px no-repeat;
+  background: url(../../img/icon-right-arrow-gray-24x24.png) center/24px
+    no-repeat;
 }
 
 section > .sub-title {
