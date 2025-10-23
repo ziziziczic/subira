@@ -280,7 +280,17 @@ div:nth-child(4) img {
   }
 
   /* 모달 */
+  .modal-content {
+    padding: 20px;
+    width: calc(100vw - 40px);
+  }
+
   .modal-content .modal-content-text {
     display: none;
+  }
+
+  .modal-content .modal-header h3 {
+    font-size: 20px;
+    letter-spacing: -0.2px;
   }
 }
