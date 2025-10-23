@@ -135,13 +135,75 @@ div:nth-child(4) img {
   height: 374px;
 }
 
-.output-content .modal {
+/* 모달 */
+.modal {
   display: none;
 }
 
-.output-content .modal.active {
+.modal.active {
+  z-index: 999;
   position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  background: rgba(0, 0, 0, 0.5); /* 모달 배경 어둡게 */
+  border: none;
+}
+
+.modal-content {
+  width: 850px;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 20px;
+  background: var(--white);
+  padding: 40px 60px 60px;
+}
+
+.modal-content .modal-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-content .modal-header:after {
+  content: "";
+  width: 30px;
+  height: 30px;
+  background: url(../../img/output/modal/icon-close.png) center/contain
+    no-repeat;
+}
+
+.modal-content .modal-header h3 {
+  color: #1a1a1a;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: -0.32px;
+}
+
+.modal-content .modal-content-text {
+  width: 100%;
+  color: var(--black);
+  font-size: 16px;
+  letter-spacing: -0.16px;
+}
+
+.modal-content .img-content {
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.modal-content .img-content img {
   display: block;
+  width: 100% !important;
+  height: auto !important;
 }
 
 @media (max-width: 1280px) {
@@ -215,5 +277,10 @@ div:nth-child(4) img {
   .output-content.item3 div:nth-child(6) img {
     width: 300px;
     height: auto;
+  }
+
+  /* 모달 */
+  .modal-content .modal-content-text {
+    display: none;
   }
 }
