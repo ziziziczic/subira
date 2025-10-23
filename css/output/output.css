@@ -139,4 +139,68 @@ div:nth-child(4) img {
   .output-section {
     margin-top: 30px;
   }
+
+  /* 탭 메뉴 */
+  .output-tab-item {
+    height: 54px;
+  }
+
+  .output-tab-item span {
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: -0.48px;
+  }
+
+  .output-content.active {
+    margin-top: 20px;
+    display: block;
+  }
+
+  .output-content > div {
+    height: 402px;
+  }
+
+  .output-content > div + div {
+    margin-top: 20px;
+  }
+
+  .output-content .label p:first-child {
+    font-size: 16px;
+    letter-spacing: -0.48px;
+  }
+
+  .output-content .label p:last-child {
+    font-size: 14px;
+    letter-spacing: -0.42px;
+  }
+
+  /* 연등꼬리표 content */
+  .output-content.item1 > div:nth-child(1) img,
+  .output-content.item1 > div:nth-child(2) img,
+  .output-content.item1 > div:nth-child(3) img {
+    width: 225px;
+    height: 235px;
+  }
+
+  .output-content.item1 > div:nth-child(4) img {
+    width: 213px;
+    height: 265px;
+  }
+
+  /* 위패 */
+  .output-content.item2 div img {
+    width: 190px;
+    height: auto;
+  }
+
+  /* 출력물 */
+  .output-content.item3 div img {
+    width: 220px;
+    height: auto;
+  }
+
+  .output-content.item3 div:nth-child(6) img {
+    width: 300px;
+    height: auto;
+  }
 }
