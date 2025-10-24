@@ -119,6 +119,10 @@ main {
   grid-template-columns: 184px 1fr 184px 1fr;
 }
 
+.modal-content .modal-content-text dl.column-2 {
+  grid-template-columns: 184px 1fr;
+}
+
 .modal-content .modal-content-text dt {
   color: var(--gray6);
   font-size: 22px;
@@ -154,6 +158,10 @@ main {
   display: block;
   width: 100% !important;
   height: auto !important;
+}
+
+.modal-content .img-content img + img {
+  margin-top: 20px;
 }
 
 @media (max-width: 1280px) {
