@@ -24,9 +24,10 @@ main {
 
 .portfolio-list .portfolio-item {
   cursor: pointer;
-  background: var(--bg5);
-  border-radius: 20px 20px 0 0;
+  border: 1px solid #ccc;
+  border-radius: 20px;
   overflow: hidden;
+  background: var(--bg5);
 }
 
 .portfolio-list .portfolio-item img {
@@ -40,10 +41,6 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 0 0 20px 20px;
-  border-left: 1px solid #ccc;
-  border-right: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
   color: var(--black);
   font-size: 22px;
   font-weight: 600;
@@ -54,5 +51,28 @@ main {
 @media (max-width: 1280px) {
   main {
     padding: 40px 0 70px;
+  }
+
+  .portfolio-section {
+    margin-top: 20px;
+  }
+
+  .portfolio-section h3.title {
+    display: none;
+  }
+
+  .portfolio-list {
+    display: block;
+  }
+
+  .portfolio-list .portfolio-item + .portfolio-item {
+    margin-top: 20px;
+  }
+
+  .portfolio-list .portfolio-item p {
+    height: 39px;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: -0.48px;
   }
 }
