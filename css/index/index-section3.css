@@ -12,11 +12,30 @@
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  cursor: pointer;
   border-radius: 20px;
 }
 
-.print-swiper .swiper-slide:hover::after {
+.print-swiper .swiper-slide:nth-child(1),
+.print-swiper .swiper-slide:nth-child(4),
+.print-swiper .swiper-slide:nth-child(6),
+.print-swiper .swiper-slide:nth-child(7),
+.print-swiper .swiper-slide:nth-child(8),
+.print-swiper .swiper-slide:nth-child(9),
+.print-swiper .swiper-slide:nth-child(10),
+.print-swiper .swiper-slide:nth-child(11),
+.print-swiper .swiper-slide:nth-child(12) {
+  cursor: pointer;
+}
+
+.print-swiper .swiper-slide:nth-child(1):hover::after,
+.print-swiper .swiper-slide:nth-child(4):hover::after,
+.print-swiper .swiper-slide:nth-child(6):hover::after,
+.print-swiper .swiper-slide:nth-child(7):hover::after,
+.print-swiper .swiper-slide:nth-child(8):hover::after,
+.print-swiper .swiper-slide:nth-child(9):hover::after,
+.print-swiper .swiper-slide:nth-child(10):hover::after,
+.print-swiper .swiper-slide:nth-child(11):hover::after,
+.print-swiper .swiper-slide:nth-child(12):hover::after {
   content: "";
   position: absolute;
   top: 0;
@@ -85,7 +104,11 @@
 }
 
 /* 모달 */
-.print-modal {
+.modal {
+  display: none;
+}
+
+.modal.active {
   position: fixed !important;
   top: 0 !important;
   left: 0 !important;
@@ -96,8 +119,6 @@
   display: flex !important;
   justify-content: center;
   align-items: center;
-  cursor: pointer;
-  border-radius: 0;
   margin: 0 !important;
   padding: 0 !important;
   transform: none !important;
@@ -105,23 +126,60 @@
   overflow: hidden !important;
 }
 
-.print-modal img {
-  width: auto !important;
-  height: auto !important;
-  max-width: 600px;
-  object-fit: contain;
+.modal-content {
+  display: none;
+  width: 850px;
+  max-height: 80%;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 20px;
+  background: var(--white);
+  padding: 40px 60px 60px;
 }
 
-.print-modal .print-cate-text {
-  /* position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: rgba(255, 255, 255, 0.9);
-  padding: 20px;
-  border-radius: 10px;
-  margin-bottom: 0; */
-  display: none;
+.modal .modal-content {
+  display: flex;
+}
+
+.modal-content .modal-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-content .modal-header:after {
+  content: "";
+  width: 30px;
+  height: 30px;
+  background: url(../../img/output/modal/icon-close.png) center/contain
+    no-repeat;
+}
+
+.modal-content .modal-header h3 {
+  color: #1a1a1a;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: -0.32px;
+}
+
+.modal-content .modal-content-text {
+  width: 100%;
+  color: var(--black);
+  font-size: 16px;
+  letter-spacing: -0.16px;
+}
+
+.modal-content .img-content {
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.modal-content .img-content img {
+  display: block;
+  width: 100% !important;
+  height: auto !important;
 }
 
 @media (max-width: 1280px) {
@@ -173,8 +231,17 @@
   }
 
   /* 모달 */
-  .print-modal img {
-    max-width: 80vw;
-    object-fit: contain;
+  .modal-content {
+    padding: 20px;
+    width: calc(100vw - 40px);
+  }
+
+  .modal-content .modal-content-text {
+    display: none;
+  }
+
+  .modal-content .modal-header h3 {
+    font-size: 20px;
+    letter-spacing: -0.2px;
   }
 }
