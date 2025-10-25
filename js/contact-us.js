@@ -127,16 +127,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // Clear all select elements
       const telephoneSelect = document.querySelector(".phone-group select");
-      telephoneSelect.forEach(function (select) {
-        select.value = "010";
-      });
+      if (telephoneSelect) {
+        telephoneSelect.value = "010";
+      }
 
       const emailSelect = document.querySelector(".email-group select");
-      emailSelect.forEach(function (select) {
-        select.value = "";
-      });
+      if (emailSelect) {
+        emailSelect.value = "직접입력";
+      }
 
       // Clear all radio elements
+      const radioInputs = document.querySelectorAll("input[type='radio']");
       radioInputs.forEach(function (radioInput) {
         radioInput.checked = false;
       });
@@ -147,9 +148,9 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       // Clear all agree elements
-      const agreeInput = document.getElementById("agree-yes");
+      const agreeInput = document.getElementById("agree-no");
       if (agreeInput) {
-        agreeInput.checked = false;
+        agreeInput.checked = true;
       }
 
       // Clear all modal content
