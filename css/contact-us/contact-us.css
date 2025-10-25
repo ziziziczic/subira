@@ -170,8 +170,12 @@ form-row input[type="text"]::placeholder {
   text-align: center;
 }
 
-.email-group .at + input[type="text"] {
+#email-domain {
   width: 260px;
+}
+
+#email-domain:disabled {
+  background: transparent;
 }
 
 .email-group .select {
@@ -352,24 +356,27 @@ form-row input[type="text"]::placeholder {
   }
 
   .email-group .at {
+    flex-shrink: 0;
     color: #b3b3b3;
     font-size: 14px;
     font-weight: 400;
     line-height: 140%; /* 19.6px */
   }
 
-  .email-group .at + input[type="text"] {
-    width: 50px !important;
+  #email-domain {
+    flex-shrink: 0;
+    width: 90px !important;
   }
 
   .email-group .select {
     flex-shrink: 0;
     padding: 0;
-    width: 85px !important;
-    height: 22px;
+    width: 20px;
+    height: 20px;
     border: none;
-    background: url(../../img/contact-us/icon-down-arrow.png) center right 0px/ 20px
-      20px no-repeat;
+    color: transparent;
+    background: url(../../img/contact-us/icon-down-arrow.png) center/contain
+      no-repeat;
   }
 
   .content + .form-content {

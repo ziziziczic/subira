@@ -183,10 +183,14 @@
                 />
                 <span class="at">@</span>
                 <input id="email-domain" type="text" placeholder="직접입력" />
-                <select class="select" aria-label="도메인 선택">
-                  <option value="">직접 입력</option>
-                  <option>naver.com</option>
-                  <option>gmail.com</option>
+                <select
+                  id="email-domain-select"
+                  class="select"
+                  aria-label="도메인 선택"
+                >
+                  <option value="">직접입력</option>
+                  <option value="naver.com">naver</option>
+                  <option value="gmail.com">gmail</option>
                 </select>
               </div>
             </div>
@@ -280,5 +284,6 @@
     <!-- JavaScript -->
     <script src="./js/header.js"></script>
     <script src="./js/footer.js"></script>
+    <script src="./js/contact-us.js"></script>
   </body>
 </html>
