@@ -275,6 +275,73 @@ form-row input[type="text"]::placeholder {
   background: var(--black3);
 }
 
+/* 모달 */
+.modal {
+  display: none;
+}
+
+.modal.active {
+  z-index: 999;
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  background: rgba(0, 0, 0, 0.5); /* 모달 배경 어둡게 */
+  border: none;
+}
+
+.modal-content {
+  width: 542px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--white);
+  padding: 40px 60px 60px;
+}
+
+.modal-content .modal-header {
+  margin-bottom: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.modal-content .modal-header:after {
+  cursor: pointer;
+  content: "";
+  width: 30px;
+  height: 30px;
+  background: url(../../img/output/modal/icon-close.png) center/contain
+    no-repeat;
+}
+
+.modal-content .modal-content-text {
+  margin-bottom: 30px;
+  flex-shrink: 0;
+  width: 100%;
+}
+
+.modal-content .modal-content-text p {
+  color: var(--black);
+  text-align: center;
+  font-size: 24px;
+}
+
+.modal-content .btn--confirm {
+  height: 48px;
+  color: var(--white);
+  font-size: 16px;
+  border-radius: 4px;
+  background: var(--black3);
+}
+
 /* 반응형 */
 @media (max-width: 1280px) {
   main {
@@ -427,5 +494,27 @@ form-row input[type="text"]::placeholder {
     font-size: 20px;
     height: 56px;
     border-radius: 10px;
+  }
+
+  /* 모달 */
+  .modal-content {
+    padding: 20px;
+    width: calc(100vw - 40px);
+    gap: 0;
+  }
+
+  .modal-content .modal-header {
+    margin-bottom: 6px;
+  }
+
+  .modal-content .modal-content-text {
+    margin-bottom: 20px;
+    display: block;
+    height: auto;
+  }
+
+  .modal-content .modal-content-text p {
+    text-align: center;
+    font-size: 16px;
   }
 }

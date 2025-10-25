@@ -87,6 +87,7 @@ main {
 }
 
 .modal-content .modal-header:after {
+  cursor: pointer;
   content: "";
   width: 30px;
   height: 30px;
@@ -199,10 +200,6 @@ main {
     gap: 0;
   }
 
-  .modal-content .modal-content-text {
-    display: block;
-  }
-
   .modal-content .modal-header h3 {
     font-size: 20px;
     letter-spacing: -0.2px;
@@ -211,6 +208,7 @@ main {
   .modal-content .modal-content-text {
     margin-top: 30px;
     margin-bottom: 12px;
+    display: block;
     height: auto;
   }
 
