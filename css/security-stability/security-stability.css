@@ -228,6 +228,7 @@ main {
   }
 
   .intro-content h3.title {
+    margin-bottom: 10px;
     font-size: 18px;
     line-height: 140%; /* 25.2px */
     letter-spacing: -0.54px;
@@ -239,7 +240,7 @@ main {
   }
 
   .intro-content p + p {
-    margin-top: 40px;
+    margin-top: 30px;
   }
 
   /* 사용자 후기 */
