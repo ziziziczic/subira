@@ -160,9 +160,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Add click event listener to modal to close it
     modal.addEventListener("click", function (e) {
-      // Only close if clicking on the modal backdrop (not the content)
-      if (e.target === modal) {
+      // Close when clicking on the modal backdrop or modal content
+      if (e.target === modal || e.target.closest(".modal-content")) {
         modal.classList.remove("active");
+        document.body.style.overflow = "";
       }
     });
   }
