@@ -36,6 +36,69 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+// 취소버튼 누르면 input, textarea, select 초기화
+document.addEventListener("DOMContentLoaded", function () {
+  const cancelButton = document.querySelector(".btn--primary");
+  if (cancelButton) {
+    cancelButton.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      // Get all input and textarea elements
+      const inputs = document.querySelectorAll("input[type='text']");
+      const textareas = document.querySelectorAll("textarea");
+
+      // Clear all input and textarea fields
+      inputs.forEach(function (input) {
+        input.value = "";
+      });
+
+      textareas.forEach(function (textarea) {
+        textarea.value = "";
+      });
+
+      // Clear all select elements
+      const telephoneSelect = document.querySelector(".phone-group select");
+      if (telephoneSelect) {
+        telephoneSelect.value = "010";
+      }
+
+      const emailSelect = document.querySelector(".email-group select");
+      if (emailSelect) {
+        emailSelect.value = "직접입력";
+      }
+
+      // Clear all radio elements
+      const radioInputs = document.querySelectorAll("input[type='radio']");
+      radioInputs.forEach(function (radioInput) {
+        radioInput.checked = false;
+      });
+
+      const subiraInput = document.getElementById("subira");
+      if (subiraInput) {
+        subiraInput.checked = true;
+      }
+
+      // Clear all agree elements
+      const agreeInput = document.getElementById("agree-no");
+      if (agreeInput) {
+        agreeInput.checked = true;
+      }
+
+      // Clear all modal content
+      const modalContentText = document.querySelector(".modal-content-text");
+      if (modalContentText) {
+        modalContentText.innerHTML = "";
+      }
+
+      // Close modal
+      const modal = document.querySelector(".modal");
+      if (modal) {
+        modal.classList.remove("active");
+      }
+    });
+  }
+});
+
 // 등록하기 버튼 클릭 시 모달 표시
 document.addEventListener("DOMContentLoaded", function () {
   // Get the submit button and modal elements
@@ -99,69 +162,6 @@ document.addEventListener("DOMContentLoaded", function () {
     modal.addEventListener("click", function (e) {
       // Only close if clicking on the modal backdrop (not the content)
       if (e.target === modal) {
-        modal.classList.remove("active");
-      }
-    });
-  }
-});
-
-// 취소버튼 누르면 input, textarea, select 초기화
-document.addEventListener("DOMContentLoaded", function () {
-  const cancelButton = document.querySelector(".btn--primary");
-  if (cancelButton) {
-    cancelButton.addEventListener("click", function (e) {
-      e.preventDefault();
-
-      // Get all input and textarea elements
-      const inputs = document.querySelectorAll("input[type='text']");
-      const textareas = document.querySelectorAll("textarea");
-
-      // Clear all input and textarea fields
-      inputs.forEach(function (input) {
-        input.value = "";
-      });
-
-      textareas.forEach(function (textarea) {
-        textarea.value = "";
-      });
-
-      // Clear all select elements
-      const telephoneSelect = document.querySelector(".phone-group select");
-      if (telephoneSelect) {
-        telephoneSelect.value = "010";
-      }
-
-      const emailSelect = document.querySelector(".email-group select");
-      if (emailSelect) {
-        emailSelect.value = "직접입력";
-      }
-
-      // Clear all radio elements
-      const radioInputs = document.querySelectorAll("input[type='radio']");
-      radioInputs.forEach(function (radioInput) {
-        radioInput.checked = false;
-      });
-
-      const subiraInput = document.getElementById("subira");
-      if (subiraInput) {
-        subiraInput.checked = true;
-      }
-
-      // Clear all agree elements
-      const agreeInput = document.getElementById("agree-no");
-      if (agreeInput) {
-        agreeInput.checked = true;
-      }
-
-      // Clear all modal content
-      const modalContentText = document.querySelector(".modal-content-text");
-      if (modalContentText) {
-        modalContentText.innerHTML = "";
-      }
-
-      // Close modal
-      const modal = document.querySelector(".modal");
-      if (modal) {
         modal.classList.remove("active");
       }
     });
