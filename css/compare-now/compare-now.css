@@ -208,23 +208,32 @@ main {
 
 .comparison-table .subira-column div {
   width: 536px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.comparison-table thead th div {
+  height: 119px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .comparison-table thead th:nth-child(2) {
-  height: 119px;
   color: var(--black);
   font-weight: 600;
   background: var(--bg7);
 }
 
-.comparison-table thead th:last-child {
-  height: 119px;
+.comparison-table thead th:last-child div {
   font-weight: 600;
   background: var(--purple);
   color: #2f54a7;
 }
 
-.comparison-table thead th:last-child b {
+.comparison-table thead th:last-child div b {
   font-size: 26px;
   font-weight: 700;
   color: #2f54a7;
@@ -370,16 +379,19 @@ main {
   }
 
   .comparison-table thead th:nth-child(2) {
-    height: 64px;
     line-height: 140%; /* 22.4px */
   }
 
   .comparison-table thead th:last-child {
-    height: 64px;
     font-weight: 600;
     color: #2f54a7;
   }
-  .comparison-table thead th:last-child b {
+
+  .comparison-table thead th div {
+    height: 64px;
+  }
+
+  .comparison-table thead th:last-child div b {
     font-weight: 700;
     color: #2f54a7;
     font-size: 16px;
