@@ -18,6 +18,7 @@ main {
   gap: 30px;
   background: var(--bg5);
   border-radius: 20px;
+  overflow: hidden;
 }
 
 .features-grid:before {
