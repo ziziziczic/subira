@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var downloadLinks = document.querySelectorAll(".download-btn");
   if (!downloadLinks || downloadLinks.length === 0) return;
 
-  var pdfPath = "./doc/회사소개.pdf";
+  var pdfPath = "./doc/o2i회사소개2020.pdf";
 
   downloadLinks.forEach(function (link) {
     link.addEventListener("click", function (e) {
@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
         var a = document.createElement("a");
         a.href = pdfPath;
         // 'download' attribute suggests a filename; browsers may still open inline
-        a.setAttribute("download", "회사소개.pdf");
+        a.setAttribute("download", "o2i회사소개2020.pdf");
         // For some iOS/Safari cases, opening in new tab helps then prompts save/share
         a.setAttribute("target", "_blank");
         document.body.appendChild(a);
