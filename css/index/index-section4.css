@@ -38,19 +38,19 @@
 }
 
 .portfolio-area ul li:nth-child(3) img {
-  width: 226px;
-}
-
-.portfolio-area ul li:nth-child(4) img {
-  width: 349px;
-}
-
-.portfolio-area ul li:nth-child(5) img {
   width: 293px;
 }
 
-.portfolio-area ul li:nth-child(6) img {
+.portfolio-area ul li:nth-child(4) img {
   width: 226px;
+}
+
+.portfolio-area ul li:nth-child(5) img {
+  width: 349px;
+}
+
+.portfolio-area ul li:nth-child(6) img {
+  width: 293px;
 }
 
 .portfolio-area ul li p {
@@ -126,7 +126,7 @@
   }
 
   .portfolio-area ul li:nth-child(3) img {
-    width: 181px;
+    width: 235px;
   }
 
   .portfolio-area ul li:nth-child(4) {
