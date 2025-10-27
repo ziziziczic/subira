@@ -2,8 +2,8 @@ document.addEventListener("DOMContentLoaded", function () {
   var downloadLinks = document.querySelectorAll(".download-btn");
   if (!downloadLinks || downloadLinks.length === 0) return;
 
-  // Use absolute path from root to work on both local and GitHub Pages
-  var pdfPath = "/doc/o2i회사소개2020.pdf";
+  // PDF file path - using absolute path for GitHub Pages compatibility
+  var pdfPath = "/pdf/o2i회사소개2020.pdf";
 
   downloadLinks.forEach(function (link) {
     link.addEventListener("click", function (e) {
