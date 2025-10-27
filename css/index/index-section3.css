@@ -15,27 +15,11 @@
   border-radius: 20px;
 }
 
-.print-swiper .swiper-slide:nth-child(1),
-.print-swiper .swiper-slide:nth-child(4),
-.print-swiper .swiper-slide:nth-child(6),
-.print-swiper .swiper-slide:nth-child(7),
-.print-swiper .swiper-slide:nth-child(8),
-.print-swiper .swiper-slide:nth-child(9),
-.print-swiper .swiper-slide:nth-child(10),
-.print-swiper .swiper-slide:nth-child(11),
-.print-swiper .swiper-slide:nth-child(12) {
+.print-swiper .swiper-slide {
   cursor: pointer;
 }
 
-.print-swiper .swiper-slide:nth-child(1):hover::after,
-.print-swiper .swiper-slide:nth-child(4):hover::after,
-.print-swiper .swiper-slide:nth-child(6):hover::after,
-.print-swiper .swiper-slide:nth-child(7):hover::after,
-.print-swiper .swiper-slide:nth-child(8):hover::after,
-.print-swiper .swiper-slide:nth-child(9):hover::after,
-.print-swiper .swiper-slide:nth-child(10):hover::after,
-.print-swiper .swiper-slide:nth-child(11):hover::after,
-.print-swiper .swiper-slide:nth-child(12):hover::after {
+.print-swiper .swiper-slide:hover::after {
   content: "";
   position: absolute;
   top: 0;
