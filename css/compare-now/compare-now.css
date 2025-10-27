@@ -344,6 +344,7 @@ main {
   /* 비교표 섹션 */
   .comparison-description {
     padding-left: 8px;
+    margin-bottom: 20px;
   }
 
   .comparison-description p {
