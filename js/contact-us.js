@@ -34,10 +34,8 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   }
-});
 
-// 취소버튼 누르면 input, textarea, select 초기화
-document.addEventListener("DOMContentLoaded", function () {
+  // 취소버튼 누르면 input, textarea, select 초기화
   const cancelButton = document.querySelector(".btn--primary");
   if (cancelButton) {
     cancelButton.addEventListener("click", function (e) {
@@ -84,10 +82,10 @@ document.addEventListener("DOMContentLoaded", function () {
         agreeInput.checked = true;
       }
 
-      // Clear all modal content
+      // Clear all modal content (보안 강화: innerHTML 대신 DOM 조작 사용)
       const modalContentText = document.querySelector(".modal-content-text");
       if (modalContentText) {
-        modalContentText.innerHTML = "";
+        modalContentText.textContent = "";
       }
 
       // Close modal
@@ -97,11 +95,8 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   }
-});
 
-// 등록하기 버튼 클릭 시 모달 표시
-document.addEventListener("DOMContentLoaded", function () {
-  // Get the submit button and modal elements
+  // 등록하기 버튼 클릭 시 모달 표시
   const submitButton = document.querySelector(".btn--secondary");
   const modal = document.querySelector(".modal");
   const modalContextText = document.querySelector(".modal-content-text");
@@ -147,12 +142,38 @@ document.addEventListener("DOMContentLoaded", function () {
         allFieldsFilled = false;
       }
 
-      // Set modal content based on validation result
+      // Set modal content based on validation result (보안 강화: innerHTML 대신 안전한 DOM 조작 사용)
+      modalContextText.textContent = "";
+
+      const messageParagraph = document.createElement("p");
       if (allFieldsFilled) {
-        modalContextText.innerHTML = `<p class="confirm-text">문의가 접수 되었습니다.<br />담당자가 확인 후 연락드리겠습니다.<br />감사합니다.<br /></p>`;
+        messageParagraph.className = "confirm-text";
+        // 안전한 방식으로 텍스트 노드 추가 (XSS 방지)
+        const text1 = document.createTextNode("문의가 접수 되었습니다.");
+        const br1 = document.createElement("br");
+        const text2 = document.createTextNode(
+          "담당자가 확인 후 연락드리겠습니다."
+        );
+        const br2 = document.createElement("br");
+        const text3 = document.createTextNode("감사합니다.");
+        const br3 = document.createElement("br");
+        messageParagraph.appendChild(text1);
+        messageParagraph.appendChild(br1);
+        messageParagraph.appendChild(text2);
+        messageParagraph.appendChild(br2);
+        messageParagraph.appendChild(text3);
+        messageParagraph.appendChild(br3);
       } else {
-        modalContextText.innerHTML = `<p class="notice-text">필수 항목이 입력되어야<br />문의가 가능합니다.</p>`;
+        messageParagraph.className = "notice-text";
+        // 안전한 방식으로 텍스트 노드 추가 (XSS 방지)
+        const text1 = document.createTextNode("필수 항목이 입력되어야");
+        const br1 = document.createElement("br");
+        const text2 = document.createTextNode("문의가 가능합니다.");
+        messageParagraph.appendChild(text1);
+        messageParagraph.appendChild(br1);
+        messageParagraph.appendChild(text2);
       }
+      modalContextText.appendChild(messageParagraph);
 
       // Show modal
       modal.classList.add("active");
