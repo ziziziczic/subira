@@ -143,6 +143,19 @@ input[type="email"] {
 }
 
 @media (max-width: 1280px) {
+  #header {
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--white);
+  }
+
+  main {
+    margin-top: 64px;
+  }
+
   section {
     width: 100%;
     padding: 0 20px;
