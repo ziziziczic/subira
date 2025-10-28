@@ -21,8 +21,10 @@ document.addEventListener("DOMContentLoaded", function () {
         // Clone the modal content to avoid removing it from original location
         const clonedContent = modalContent.cloneNode(true);
 
-        // Clear existing modal content
-        modal.innerHTML = "";
+        // Clear existing modal content (보안 강화: innerHTML 대신 직접 DOM 조작)
+        while (modal.firstChild) {
+          modal.removeChild(modal.firstChild);
+        }
 
         // Append cloned content to modal
         modal.appendChild(clonedContent);
