@@ -176,22 +176,26 @@
             <label for="email" class="form-label">이메일</label>
             <div class="form-content">
               <div class="email-group">
-                <input
-                  id="email-id"
-                  type="text"
-                  placeholder="이메일을 입력해 주세요."
-                />
-                <span class="at">@</span>
-                <input id="email-domain" type="text" placeholder="직접입력" />
-                <select
-                  id="email-domain-select"
-                  class="select"
-                  aria-label="도메인 선택"
-                >
-                  <option value="">직접입력</option>
-                  <option value="naver.com">naver</option>
-                  <option value="gmail.com">gmail</option>
-                </select>
+                <div class="email-id-group">
+                  <input
+                    id="email-id"
+                    type="text"
+                    placeholder="이메일을 입력해 주세요."
+                  />
+                </div>
+                <div class="email-domain-group">
+                  <span class="at">@</span>
+                  <input id="email-domain" type="text" placeholder="직접입력" />
+                  <select
+                    id="email-domain-select"
+                    class="select"
+                    aria-label="도메인 선택"
+                  >
+                    <option value="">직접입력</option>
+                    <option value="naver.com">naver</option>
+                    <option value="gmail.com">gmail</option>
+                  </select>
+                </div>
               </div>
             </div>
           </div>

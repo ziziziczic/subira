@@ -162,8 +162,18 @@ form-row input[type="text"]::placeholder {
   gap: 8px;
 }
 
-.email-group input[type="text"]:first-child {
+.email-id-group {
   width: 200px;
+}
+
+#email-id {
+  width: 100%;
+}
+
+.email-domain-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .email-group .at {
@@ -417,13 +427,17 @@ form-row input[type="text"]::placeholder {
     height: 22px;
   }
 
-  .email-group input[type="text"]:first-child {
+  .email-id-group {
     flex-grow: 1;
     width: auto !important;
   }
 
-  .email-group .at {
+  .email-domain-group {
     flex-shrink: 0;
+    gap: 4px;
+  }
+
+  .email-group .at {
     color: #b3b3b3;
     font-size: 14px;
     font-weight: 400;
@@ -431,12 +445,10 @@ form-row input[type="text"]::placeholder {
   }
 
   #email-domain {
-    flex-shrink: 0;
-    width: 90px !important;
+    width: 90px;
   }
 
   .email-group .select {
-    flex-shrink: 0;
     padding: 0;
     width: 20px;
     height: 20px;
