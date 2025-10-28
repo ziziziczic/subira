@@ -13,15 +13,41 @@ document.addEventListener("DOMContentLoaded", function () {
       return response.text();
     })
     .then((data) => {
-      _header.innerHTML = data;
+      // 기존 콘텐츠 삭제 (안전한 방식)
+      while (_header.firstChild) {
+        _header.removeChild(_header.firstChild);
+      }
+
+      // 보안 강화: DOMParser와 Range API를 사용하여 안전하게 HTML 삽입
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(data, "text/html");
+
+      // style 태그와 body 내부의 모든 노드를 가져와서 추가
+      const styles = doc.querySelectorAll("style");
+      const bodyContent = doc.body.childNodes;
+
+      // style 태그 추가
+      styles.forEach((style) => {
+        _header.appendChild(style.cloneNode(true));
+      });
+
+      // body 내용 추가
+      Array.from(bodyContent).forEach((node) => {
+        _header.appendChild(node.cloneNode(true));
+      });
 
       // 모바일 메뉴 기능 초기화
       initMobileMenu();
     })
     .catch((error) => {
       console.error("header.html을 불러오는 중 오류 발생:", error);
-      _header.innerHTML =
-        "<p>메뉴를 불러오지 못했습니다. 페이지 새로고침 해주세요.</p>";
+
+      // 보안 강화: 에러 메시지를 안전하게 추가
+      _header.textContent = "";
+      const errorP = document.createElement("p");
+      errorP.textContent =
+        "메뉴를 불러오지 못했습니다. 페이지 새로고침 해주세요.";
+      _header.appendChild(errorP);
     });
 });
 
