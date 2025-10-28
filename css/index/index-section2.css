@@ -15,8 +15,9 @@
 }
 .standard-area ul li a span {
   position: absolute;
-  top: 30px;
+  top: 50%;
   left: 50px;
+  transform: translateY(-50%);
   width: auto;
   color: var(--black);
   font-size: 22px;
