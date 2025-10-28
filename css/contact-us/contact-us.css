@@ -385,6 +385,10 @@ form-row input[type="text"]::placeholder {
     display: block;
   }
 
+  .form-row input[type="text"] {
+    width: 100%;
+  }
+
   .form-label {
     padding: 0;
     min-height: auto;
